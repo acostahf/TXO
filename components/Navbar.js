@@ -23,7 +23,7 @@ export const Navbar = () => {
           LOGO
         </Text>
         <Flex justify="space-evenly" gap="4">
-          <NextLink href="/" passHref>
+          <NextLink href="/services" passHref>
             <Link>Safety Services</Link>
           </NextLink>
           <NextLink href="/" passHref>
