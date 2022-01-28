@@ -6,7 +6,7 @@ import { ServicesHero } from "../components/ServicesHero";
 const services = () => {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <ServicesHero />
     </div>
   );

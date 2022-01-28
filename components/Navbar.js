@@ -2,7 +2,7 @@ import React from "react";
 import NextLink from "next/link";
 import { Box, Flex, Text, Button, Link } from "@chakra-ui/react";
 
-export const Navbar = () => {
+const Navbar = () => {
   return (
     <Box>
       <Flex
@@ -12,24 +12,26 @@ export const Navbar = () => {
         p="8"
         boxShadow="lg"
       >
-        <Text
-          textColor="white"
-          fontWeight="bold"
-          bg="gray.500"
-          rounded="full"
-          px="8"
-          py="1"
-        >
-          LOGO
-        </Text>
+        <NextLink href="/" passHref>
+          <Link
+            textColor="white"
+            fontWeight="bold"
+            bg="gray.500"
+            rounded="full"
+            px="8"
+            py="1"
+          >
+            LOGO
+          </Link>
+        </NextLink>
         <Flex justify="space-evenly" gap="4">
           <NextLink href="/services" passHref>
             <Link>Safety Services</Link>
           </NextLink>
-          <NextLink href="/" passHref>
+          <NextLink href="/about" passHref>
             <Link>Who We Are</Link>
           </NextLink>
-          <NextLink href="/" passHref>
+          <NextLink href="/contact" passHref>
             <Link>Contact</Link>
           </NextLink>
           <Button size="sm" colorScheme="green" rounded="full" px="10">
@@ -40,3 +42,5 @@ export const Navbar = () => {
     </Box>
   );
 };
+
+export default Navbar;
