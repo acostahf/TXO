@@ -6,15 +6,8 @@ import {
   SimpleGrid,
   Text,
 } from "@chakra-ui/layout";
-import { gsap } from "gsap";
-import React, { useEffect } from "react";
 
 export const Hero = () => {
-  useEffect(() => {
-    var tl = gsap.timeline();
-    tl.from(".element", { duration: 2, y: 100, opacity: 0, stagger: 0.5 });
-  });
-
   return (
     <Box>
       <SimpleGrid minH="100vh" columns={2}>
