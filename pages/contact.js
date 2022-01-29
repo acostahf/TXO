@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import gsap from "gsap";
 import { Box, Heading } from "@chakra-ui/layout";
 
-const contact = () => {
+const Contact = () => {
   useEffect(() => {
     var tl = gsap.timeline();
     tl.from(".element", { duration: 2, y: 100, opacity: 0, stagger: 0.5 });

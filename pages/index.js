@@ -3,7 +3,6 @@ import Image from "next/image";
 import { gsap } from "gsap";
 import React, { useEffect } from "react";
 import { Hero } from "../components/Hero";
-import { Navbar } from "../components/Navbar";
 
 export default function Home() {
   useEffect(() => {
