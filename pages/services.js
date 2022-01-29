@@ -15,4 +15,4 @@ const Services = () => {
   );
 };
 
-export default services;
+export default Services;
