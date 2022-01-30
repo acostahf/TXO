@@ -24,7 +24,7 @@ export const Hero = () => {
             </Heading>
           </Box>
         </Flex>
-        <GridItem bg="red.500"></GridItem>
+        <GridItem bg="gray.300"></GridItem>
       </SimpleGrid>
     </Box>
   );

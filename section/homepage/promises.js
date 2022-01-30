@@ -1,6 +1,6 @@
 import { Box, Flex, Heading, Wrap, WrapItem } from "@chakra-ui/layout";
 import React from "react";
-import Card from "../components/card";
+import Card from "../../components/card";
 
 // data
 const cardItems = [
