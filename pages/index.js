@@ -5,6 +5,7 @@ import React, { useEffect } from "react";
 import { Hero } from "../components/Hero";
 import Promises from "../section/homepage/promises";
 import Services from "../section/homepage/services";
+import Carousel from "../section/homepage/carousel";
 
 export default function Home() {
   useEffect(() => {
@@ -16,6 +17,7 @@ export default function Home() {
       <Hero />
       <Promises />
       <Services />
+      <Carousel />
     </div>
   );
 }
