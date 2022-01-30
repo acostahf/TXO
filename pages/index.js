@@ -3,6 +3,7 @@ import Image from "next/image";
 import { gsap } from "gsap";
 import React, { useEffect } from "react";
 import { Hero } from "../components/Hero";
+import Promises from "../section/promises";
 
 export default function Home() {
   useEffect(() => {
@@ -12,6 +13,7 @@ export default function Home() {
   return (
     <div>
       <Hero />
+      <Promises />
     </div>
   );
 }
