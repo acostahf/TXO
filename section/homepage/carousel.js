@@ -15,7 +15,6 @@ const Carousel = () => {
           <Card title="something" />
           <Card title="something" />
           <Card title="something" />
-          <Card title="something" />
         </Flex>
       </Flex>
     </section>
