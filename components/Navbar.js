@@ -4,10 +4,10 @@ import { Box, Flex, Text, Button, Link } from "@chakra-ui/react";
 import gsap from "gsap";
 
 const Navbar = () => {
-  useEffect(() => {
-    // const navTl = gsap.timeline();
-    gsap.from(".box", { duration: 1.5, y: -300, stagger: 0.2 });
-  }, []);
+  // useEffect(() => {
+  //   // const navTl = gsap.timeline();
+  //   gsap.from(".box", { duration: 1.5, y: -300, stagger: 0.2 });
+  // }, []);
 
   return (
     <Box>
