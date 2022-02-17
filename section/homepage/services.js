@@ -1,38 +1,88 @@
-import { Flex, Box, SimpleGrid } from "@chakra-ui/layout";
+import { Flex, Box, SimpleGrid, VStack } from "@chakra-ui/layout";
 import React from "react";
 import TextBox from "../../components/textBox";
 
 // data
 const servicesItems = [
   {
-    title: "Services",
-    des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque sit amet porttitor eget dolor morbi non arcu risus. Metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Dui faucibus in ornare quam viverra. Interdum velit euismod in pellentesque massa placerat duis ultricies. Gravida quis blandit turpis cursus in. Urna duis convallis convallis tellus id interdum velit. Aliquam sem fringilla ut morbi tincidunt augue interdum velit. Velit sed ullamcorper morbi tincidunt ornare",
+    title: "SAFETY STAFFING",
+    des: "We alleviate your staffing burdens by contracting trained professionals to help meet your on-site safety requirements. From small projects to large ones, we match you with certified, experienced, and trusted safety coordinators that come with a wide range of work experience. They understand the complexities of serious hazards within construction and manufacturing environments to make your project a success. By allowing TXO to handle the hiring of safety profesionals, you insure that all on-site safety requirements are met on day one.",
   },
   {
-    title: "OSHA 30 Virtual",
-    des: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque sit amet porttitor eget dolor morbi non arcu risus. Metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Dui faucibus in ornare quam viverra. Interdum velit euismod in pellentesque massa placerat duis ultricies. Gravida quis blandit turpis cursus in. Urna duis convallis convallis tellus id interdum velit. Aliquam sem fringilla ut morbi tincidunt augue interdum velit. Velit sed ullamcorper morbi tincidunt ornare",
+    title: "SAFETY PROGRAMS",
+    des: "Need help creating, developing, and implementing a strong safety program for your future project? At TXO, we excel in creating and maintaining safety programs that check off every box and most importantly prevent incidents before they happen. From the custom design of the program, to training and implementation, we hold your hand throughout the process so you can worry about the project at hand, not an OSHA visit. Let us help you create a safe work environment, today.",
+  },
+  {
+    title: "SAFETY TRAINING",
+    des: "Providing your employees with the necessary and relevant safety training is key in preventing potential incidents, creating a safe work environment, and dramatically lowering the impact of your insurance costs. TXO’s highly customizable trainings in many different courses gives your employees the knowledge they need on the jobsite. With our flexible training schedule we can implement trainings weekly, monthly, or as a needed basis.",
   },
 ];
 
-const Services = () => {
+const Services = (props) => {
   return (
-    <section>
-      {servicesItems.map((item, i) => (
-        <Flex align="center" px="20" minH="container.sm">
-          {i % 2 ? (
-            <SimpleGrid columns="2" key={i}>
-              <Box bgColor="gray.300"></Box>
-              <TextBox title={item.title} des={item.des} />
-            </SimpleGrid>
-          ) : (
-            <SimpleGrid columns="2" key={i}>
-              <TextBox title={item.title} des={item.des} />
-              <Box bgColor="gray.300"></Box>
-            </SimpleGrid>
-          )}
-        </Flex>
-      ))}
-    </section>
+    <VStack bg="brand.400" color="brand.300">
+      <Flex align="center" px="20" minH="container.sm">
+        <SimpleGrid columns="2">
+          <Box position="relative" bgColor="gray.300">
+            <Box
+              as="button"
+              px="4"
+              py="2"
+              bg="brand.300"
+              fontWeight="extrabold"
+              fontSize="2xl"
+              color="brand.400"
+              position="absolute"
+              top="-5"
+              left="-5"
+            >
+              CERTIFIED
+            </Box>
+            <Box
+              as="button"
+              px="4"
+              py="2"
+              bg="brand.300"
+              fontWeight="extrabold"
+              fontSize="2xl"
+              color="brand.400"
+              position="absolute"
+              top="32"
+              left="32"
+            >
+              EXPERIENCED
+            </Box>
+            <Box
+              as="button"
+              px="4"
+              py="2"
+              bg="brand.300"
+              fontWeight="extrabold"
+              fontSize="2xl"
+              color="brand.400"
+              position="absolute"
+              bottom="10"
+              left="-10"
+            >
+              TRUSTED
+            </Box>
+          </Box>
+          <TextBox title={servicesItems[0].title} des={servicesItems[0].des} />
+        </SimpleGrid>
+      </Flex>
+      <Flex align="center" px="20" minH="container.sm">
+        <SimpleGrid columns="2">
+          <TextBox title={servicesItems[1].title} des={servicesItems[1].des} />
+          <Box bgColor="gray.300"></Box>
+        </SimpleGrid>
+      </Flex>
+      <Flex align="center" px="20" minH="container.sm">
+        <SimpleGrid columns="2">
+          <Box bgColor="gray.300"></Box>
+          <TextBox title={servicesItems[2].title} des={servicesItems[2].des} />
+        </SimpleGrid>
+      </Flex>
+    </VStack>
   );
 };
 
