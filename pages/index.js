@@ -7,6 +7,7 @@ import { Hero } from "../components/Hero";
 import Promises from "../section/homepage/promises";
 import Services from "../section/homepage/services";
 import Carousel from "../section/homepage/carousel";
+import Join from "../section/homepage/join";
 
 gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
@@ -40,6 +41,7 @@ export default function Home() {
       <Promises />
       <Services />
       <Carousel />
+      <Join />
     </div>
   );
 }
