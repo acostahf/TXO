@@ -21,7 +21,13 @@ export default function Home() {
         // markers: true,
       },
     });
-    tl.from(".element", { duration: 2, y: 100, opacity: 0, stagger: 0.5 });
+
+    tl.from(".element", {
+      duration: 2,
+      y: 100,
+      opacity: 0,
+      stagger: 0.5,
+    });
     // tl.to(".element", { duration: 2, x: 500 });
     //
     tl2.from(".title", { duration: 1, opacity: 0, x: 100 });
