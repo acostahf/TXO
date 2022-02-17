@@ -2,12 +2,13 @@ import { ChakraProvider } from "@chakra-ui/react";
 import Layout from "../components/layout";
 import PageTransitions from "../components/PageTransitions";
 import { useRouter } from "next/router";
+import theme from "../theme";
 // import GlobalStyle from "../styles/global-styles";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <PageTransitions route={router.asPath}>
         <Layout>
           <Component {...pageProps} />
