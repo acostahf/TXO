@@ -3,12 +3,29 @@ import { Box, Heading, Text, Flex } from "@chakra-ui/layout";
 
 const Card = (props) => {
   return (
-    <Flex maxW="xs" direction="column" align="center" p="12">
-      <Box w="20" h="20" bgColor="gray.500" rounded="full" mb="2"></Box>
-      <Heading as="h6" fontSize="xl" mb="2">
+    <Flex
+      bg="brand.400"
+      color="brand.300"
+      maxW="sm"
+      h="100%"
+      direction="column"
+      align="center"
+      p="12"
+      position="relative"
+    >
+      <Box
+        position="absolute"
+        top="-14"
+        w="28"
+        h="28"
+        bgColor="brand.100"
+        rounded="full"
+        mb="2"
+      ></Box>
+      <Heading pt="10" as="h6" fontSize="xl" mb="2">
         {props.title}
       </Heading>
-      <Text fontSize="md" align="center">
+      <Text fontSize="sm" align="center">
         {props.description}
       </Text>
     </Flex>
