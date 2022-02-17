@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import NextLink from "next/link";
 import { Box, Flex, Text, Button, Link } from "@chakra-ui/react";
 import gsap from "gsap";
+import theme from "../theme";
 
 const Navbar = () => {
   // useEffect(() => {
@@ -10,15 +11,16 @@ const Navbar = () => {
   // }, []);
 
   return (
-    <Box>
+    <Box bg="brand.400">
       <Flex
         w="100%"
         justify="space-between"
         align="center"
-        p="8"
+        p="6"
+        px="12"
         boxShadow="lg"
       >
-        <NextLink href="/" passHref>
+        <NextLink href="/" passHref bg="brand.100">
           <Link
             className="box"
             textColor="white"
@@ -31,7 +33,7 @@ const Navbar = () => {
             LOGO
           </Link>
         </NextLink>
-        <Flex justify="space-evenly" align="center" gap="4">
+        <Flex color="brand.300" justify="space-evenly" align="center" gap="4">
           <NextLink href="/services" passHref>
             <Link className="box">Safety Services</Link>
           </NextLink>
@@ -46,12 +48,12 @@ const Navbar = () => {
               className="box"
               textColor="white"
               fontWeight="bold"
-              bg="green.500"
+              bg="brand.200"
               rounded="full"
               px="8"
               py="1"
             >
-              BTN
+              GET IN TOUCH
             </Link>
           </NextLink>
         </Flex>
