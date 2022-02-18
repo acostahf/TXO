@@ -4,19 +4,19 @@ import { Flex, Box, Text, Center, SimpleGrid } from "@chakra-ui/layout";
 const textBox = (props) => {
   return (
     <Flex direction="column" p="10">
-      <Text fontWeight="bold" fontSize="xl" color="green.600">
+      <Text fontWeight="extrabold" fontSize="2xl" color="brand.300">
         {props.title}
       </Text>
       <Text mt="2">{props.des}</Text>
-      <ButtonGroup mt="8">
+      <ButtonGroup mt="20">
         <Button
           rounded="full"
           px="10"
-          bgColor="green.700"
+          bgColor="brand.500"
           color="white"
           variant="solid"
         >
-          Button
+          GET IN TOUCH
         </Button>
       </ButtonGroup>
     </Flex>

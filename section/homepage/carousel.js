@@ -1,23 +1,21 @@
-import { Flex, Text, Box } from "@chakra-ui/layout";
+import { Flex, Text, Box, Heading } from "@chakra-ui/layout";
 import React from "react";
-import Card from "../../components/card";
+import Card from "../../components/carCard";
 
 const Carousel = () => {
   return (
-    <section>
-      <Flex mt="2" align="center" direction="column">
-        <Text fontSize="2xl" fontWeight="bold">
-          Industries We Service
-        </Text>
-        <Flex>
-          <Card title="something" />
-          <Card title="something" />
-          <Card title="something" />
-          <Card title="something" />
-          <Card title="something" />
-        </Flex>
+    <Flex py="10" align="center" direction="column" bg="brand.300">
+      <Heading fontSize="3xl" fontWeight="extrabold">
+        INDUSTRIES WE SERVICE
+      </Heading>
+      <Flex>
+        <Card title="something" />
+        <Card title="something" />
+        <Card title="something" />
+        <Card title="something" />
+        <Card title="something" />
       </Flex>
-    </section>
+    </Flex>
   );
 };
 

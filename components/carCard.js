@@ -1,28 +1,18 @@
 import React from "react";
 import { Box, Heading, Text, Flex } from "@chakra-ui/layout";
 
-const Card = (props) => {
+const carCard = (props) => {
   return (
     <Flex
-      bg="brand.400"
-      color="brand.300"
+      color="brand.400"
       maxW="sm"
       h="100%"
       direction="column"
       align="center"
       p="12"
-      position="relative"
     >
-      <Box
-        position="absolute"
-        top="-14"
-        w="28"
-        h="28"
-        bgColor="brand.100"
-        rounded="full"
-        mb="2"
-      ></Box>
-      <Heading pt="10" as="h6" fontSize="xl" mb="2">
+      <Box w="28" h="28" bgColor="brand.400" rounded="full" mb="2"></Box>
+      <Heading pt="2" as="h6" fontSize="xl" mb="2">
         {props.title}
       </Heading>
       <Text fontSize="sm" align="center">
@@ -32,4 +22,4 @@ const Card = (props) => {
   );
 };
 
-export default Card;
+export default carCard;

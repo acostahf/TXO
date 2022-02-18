@@ -3,7 +3,7 @@ import Head from "next/head";
 import Navbar from "./Navbar";
 import Footer from "./footer";
 
-export default function Layout({ children }) {
+function Layout({ children }) {
   return (
     <>
       <div>
@@ -14,3 +14,5 @@ export default function Layout({ children }) {
     </>
   );
 }
+
+export default Layout;
