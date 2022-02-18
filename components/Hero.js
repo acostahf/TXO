@@ -34,8 +34,9 @@ export const Hero = () => {
                 borderRightRadius="3xl"
                 borderColor="brand.200"
                 bg="brand.400"
-                children="GET IN TOUCH"
-              />
+              >
+                GET IN TOUCH
+              </InputRightAddon>
             </InputGroup>
           </Stack>
         </Flex>
