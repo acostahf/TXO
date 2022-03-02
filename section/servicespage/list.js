@@ -6,17 +6,20 @@ import {
   Heading,
   SimpleGrid,
   Text,
+  Stack,
 } from "@chakra-ui/layout";
 
 const list = () => {
   return (
     <box>
-      <Flex
+      <Stack
         minH="100vh"
         align="center"
         direction="column"
         bg="brand.400"
         color="brand.300"
+        p="10"
+        spacing="10"
       >
         <Heading>SAFETY TRAINING</Heading>
         <Text>
@@ -28,7 +31,7 @@ const list = () => {
           With our flexible training schedule we can implement trainings weekly,
           monthly, or as a needed basis.
         </Text>
-      </Flex>
+      </Stack>
     </box>
   );
 };
