@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import NextLink from "next/link";
+import Image from "next/image";
 import { Box, Flex, Text, Button, Link } from "@chakra-ui/react";
 import gsap from "gsap";
 import theme from "../theme";
@@ -25,12 +26,10 @@ const Navbar = () => {
             className="box"
             textColor="white"
             fontWeight="bold"
-            bg="gray.500"
-            rounded="full"
             px="8"
             py="1"
           >
-            LOGO
+            <Image src="/nav-logo.png" width="125" height="54" alt="TXO Logo" />
           </Link>
         </NextLink>
         <Flex color="brand.300" justify="space-evenly" align="center" gap="4">
