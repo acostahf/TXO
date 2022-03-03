@@ -42,13 +42,7 @@ export const Hero = () => {
           </Stack>
         </Flex>
         <GridItem bg="gray.300" position="relative">
-          <Image
-            src="/header.jpg"
-            alt="header imager"
-            // width={500}
-            // height={500}
-            layout="fill"
-          />
+          <Image src="/header.jpg" alt="header imager" layout="fill" priority />
         </GridItem>
       </SimpleGrid>
     </Box>

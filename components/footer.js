@@ -1,5 +1,6 @@
 import React from "react";
 import NextLink from "next/link";
+import Image from "next/image";
 import { VStack, Flex, Link, Box, Text, Divider } from "@chakra-ui/react";
 
 const Footer = () => {
@@ -10,8 +11,9 @@ const Footer = () => {
       justify="center"
       bg="brand.400"
       color="brand.300"
+      p="10"
     >
-      <VStack>
+      <VStack gap="4">
         <Flex
           justify="space-evenly"
           align="center"
@@ -28,7 +30,14 @@ const Footer = () => {
             <Link className="box">CONTACT</Link>
           </NextLink>
         </Flex>
-        <Box></Box>
+        <Box>
+          <Image
+            src="/green-logo.png"
+            width="229px"
+            height="99px"
+            alt="green logo"
+          />
+        </Box>
         <Divider />
         <Flex>
           <Text>Copright 2023. TXO Consulting, LLC. All rights reserved.</Text>

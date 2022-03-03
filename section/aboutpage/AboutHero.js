@@ -10,6 +10,7 @@ import {
   HStack,
   StackDivider,
 } from "@chakra-ui/react";
+import Image from "next/image";
 
 const AboutHero = (props) => {
   return (
@@ -26,6 +27,9 @@ const AboutHero = (props) => {
           divider={<StackDivider borderColor="gray.200" />}
         >
           <Flex maxW="2xl" align="start" flexDirection="column" p="10">
+            <Box position="relative">
+              <Image src="/values.png" alt="Values" width="600" height="462" />
+            </Box>
             <Text fontWeight="semibold" fontSize="4xl" paddingBottom="5">
               Mission
             </Text>
@@ -39,6 +43,9 @@ const AboutHero = (props) => {
           </Flex>
 
           <Flex maxW="2xl" align="start" flexDirection="column" p="10">
+            <Box position="relative">
+              <Image src="/values.png" alt="Values" width="600" height="462" />
+            </Box>
             <Text fontWeight="semibold" fontSize="4xl" paddingBottom="5">
               VALUES
             </Text>
