@@ -1,6 +1,7 @@
 import gsap from "gsap";
 import React, { useEffect } from "react";
 import List from "../section/servicespage/list";
+import Reviews from "../section/servicespage/reviews";
 
 import { ServicesHero } from "../section/servicespage/ServicesHero";
 
@@ -13,6 +14,7 @@ const Services = () => {
     <div>
       <ServicesHero />
       <List />
+      <Reviews />
     </div>
   );
 };
