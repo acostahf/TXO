@@ -4,10 +4,18 @@ import {
   Flex,
   GridItem,
   Heading,
-  SimpleGrid,
+  HStack,
   Text,
   Stack,
+  StackDivider,
 } from "@chakra-ui/layout";
+
+// const items = [
+//  {
+//    title: "OSHA 10-hour",
+//  },
+
+// ];
 
 const list = () => {
   return (
@@ -31,6 +39,38 @@ const list = () => {
           With our flexible training schedule we can implement trainings weekly,
           monthly, or as a needed basis.
         </Text>
+        <HStack
+          columns={2}
+          spacing={1}
+          gap="3"
+          divider={<StackDivider borderColor="brand.200" />}
+        >
+          <Flex flexDirection="column" alignItems="end">
+            <Text>OSHA 10-hour</Text>
+            <Text>Bloodborne Pathogens</Text>
+            <Text>Crane Safety</Text>
+            <Text>Electrical Safety</Text>
+            <Text>Emergency Response Planning</Text>
+            <Text>Ergonomics Awareness</Text>
+            <Text>Fall Protection</Text>
+            <Text>Forklift/Powered Industrial Vehicle</Text>
+            <Text>Hazard Communication</Text>
+            <Text>Hearing Protection</Text>
+          </Flex>
+
+          <Flex flexDirection="column">
+            <Text>OSHA 10-hour</Text>
+            <Text>Bloodborne Pathogens</Text>
+            <Text>Crane Safety</Text>
+            <Text>Electrical Safety</Text>
+            <Text>Emergency Response Planning</Text>
+            <Text>Ergonomics Awareness</Text>
+            <Text>Fall Protection</Text>
+            <Text>Forklift/Powered Industrial Vehicle</Text>
+            <Text>Hazard Communication</Text>
+            <Text>Hearing Protection</Text>
+          </Flex>
+        </HStack>
       </Stack>
     </box>
   );

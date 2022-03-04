@@ -15,6 +15,7 @@ export const ServicesHero = () => {
           className="element"
           fontSize="5xl"
           fontWeight="extrabold"
+          textAlign="center"
           as="h1"
         >
           SAFETEY SERVICES <br /> & TRAININGS
