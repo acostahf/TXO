@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import React, { useEffect } from "react";
@@ -7,7 +6,7 @@ import { Hero } from "../components/Hero";
 import Promises from "../section/homepage/promises";
 import Services from "../section/homepage/services";
 import Carousel from "../section/homepage/carousel";
-// import Join from "../section/aboutpage/join";
+import Join from "../section/homepage/join";
 
 gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
@@ -41,7 +40,7 @@ export default function Home() {
       <Promises />
       <Services />
       <Carousel />
-      {/* <Join /> */}
+      <Join />
     </div>
   );
 }
