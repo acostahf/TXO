@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   Box,
   Flex,
@@ -40,7 +41,9 @@ export const Hero = () => {
             </InputGroup>
           </Stack>
         </Flex>
-        <GridItem bg="gray.300"></GridItem>
+        <GridItem bg="gray.300" position="relative">
+          <Image src="/header.jpg" alt="header imager" layout="fill" priority />
+        </GridItem>
       </SimpleGrid>
     </Box>
   );

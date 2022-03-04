@@ -1,7 +1,9 @@
 import gsap from "gsap";
 import React, { useEffect } from "react";
+import List from "../section/servicespage/list";
+import Reviews from "../section/servicespage/reviews";
 
-import { ServicesHero } from "../components/ServicesHero";
+import { ServicesHero } from "../section/servicespage/ServicesHero";
 
 const Services = () => {
   useEffect(() => {
@@ -11,6 +13,8 @@ const Services = () => {
   return (
     <div>
       <ServicesHero />
+      <List />
+      <Reviews />
     </div>
   );
 };
