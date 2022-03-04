@@ -39,8 +39,10 @@ const About = () => {
               borderColor="brand.200"
               bg="brand.400"
               color="brand.300"
-              children="GET IN TOUCH"
-            />
+              // children="GET IN TOUCH"
+            >
+              GET IN TOUCH
+            </InputRightAddon>
           </InputGroup>
         </Flex>
       </Flex>
