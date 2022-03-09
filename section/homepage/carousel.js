@@ -49,6 +49,10 @@ const Carousel = () => {
     loop: true,
     renderMode: "performance",
     initial: 0,
+    slides: {
+      perView: 5,
+      spacing: 5,
+    },
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel);
     },
