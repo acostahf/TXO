@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { Box, Heading, Text, Flex } from "@chakra-ui/layout";
 
 const Card = (props) => {
@@ -21,7 +22,9 @@ const Card = (props) => {
         bgColor="brand.100"
         rounded="full"
         mb="2"
-      ></Box>
+      >
+        <Image src={props.img} alt="header imager" layout="fill" priority />
+      </Box>
       <Heading pt="10" as="h6" fontSize="xl" mb="2">
         {props.title}
       </Heading>

@@ -9,7 +9,7 @@ const servicesItems = [
   {
     title: "SAFETY STAFFING",
     des: "We alleviate your staffing burdens by contracting trained professionals to help meet your on-site safety requirements. From small projects to large ones, we match you with certified, experienced, and trusted safety coordinators that come with a wide range of work experience. They understand the complexities of serious hazards within construction and manufacturing environments to make your project a success. By allowing TXO to handle the hiring of safety profesionals, you insure that all on-site safety requirements are met on day one.",
-    src: "/safety-staffing.jpg",
+    src: "/safety-staffing.png",
   },
   {
     title: "SAFETY PROGRAMS",
@@ -29,15 +29,16 @@ const Services = (props) => {
       <Flex align="center" px="20" minH="container.sm">
         <SimpleGrid columns="2">
           <Box
-            bgColor="gray.300"
+            // bgColor="gray.300"
             position="relative"
-            height="499px"
-            width="654px"
+            // height="499px"
           >
             <Image
               src={servicesItems[0].src}
               alt="header image"
-              layout="fill"
+              layout="responsive"
+              width="654"
+              height="499"
             />
             <Box
               as="button"
@@ -88,32 +89,26 @@ const Services = (props) => {
       <Flex align="center" px="20" minH="container.sm">
         <SimpleGrid columns="2">
           <TextBox title={servicesItems[1].title} des={servicesItems[1].des} />
-          <Box
-            bgColor="gray.300"
-            position="relative"
-            height="499px"
-            width="654px"
-          >
+          <Box position="relative">
             <Image
               src={servicesItems[1].src}
               alt="header image"
-              layout="fill"
+              layout="responsive"
+              width="654"
+              height="499"
             />
           </Box>
         </SimpleGrid>
       </Flex>
       <Flex align="center" px="20" minH="container.sm">
         <SimpleGrid columns="2">
-          <Box
-            bgColor="gray.300"
-            position="relative"
-            height="499px"
-            width="654px"
-          >
+          <Box position="relative">
             <Image
               src={servicesItems[2].src}
               alt="header image"
-              layout="fill"
+              layout="responsive"
+              width="654"
+              height="499"
             />
           </Box>
           <TextBox title={servicesItems[2].title} des={servicesItems[2].des} />
