@@ -2,6 +2,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import Layout from "../components/layout";
 import PageTransitions from "../components/PageTransitions";
 import { useRouter } from "next/router";
+import Fonts from "../fonts";
 import theme from "../theme";
 // import GlobalStyle from "../styles/global-styles";
 
@@ -9,6 +10,7 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
   return (
     <ChakraProvider theme={theme}>
+      <Fonts />
       <PageTransitions route={router.asPath}>
         <Layout>
           <Component {...pageProps} />

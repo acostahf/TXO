@@ -26,7 +26,12 @@ export const Hero = () => {
         <Flex justify="center" align="center" flexDirection="column" p="10">
           <Stack spacing={10}>
             <Box>
-              <Text className="element" fontWeight="semibold" fontSize="xl">
+              <Text
+                className="element"
+                fontWeight="semibold"
+                fontSize="xl"
+                fontFamily={"heading"}
+              >
                 No Matter Who You Are.
               </Text>
               <Heading className="element" as="h1" size="4xl">
