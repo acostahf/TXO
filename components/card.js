@@ -25,10 +25,10 @@ const Card = (props) => {
       >
         <Image src={props.img} alt="header imager" layout="fill" priority />
       </Box>
-      <Heading pt="10" as="h6" fontSize="xl" mb="2">
+      <Heading pt="10" pb="5" size={"xs"} mb="2">
         {props.title}
       </Heading>
-      <Text fontSize="sm" align="center">
+      <Text fontSize="xs" align="center">
         {props.description}
       </Text>
     </Flex>

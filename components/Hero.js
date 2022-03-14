@@ -28,9 +28,9 @@ export const Hero = () => {
             <Box>
               <Text
                 className="element"
-                fontWeight="semibold"
+                // fontWeight="semibold"
                 fontSize="xl"
-                fontFamily={"heading"}
+                // fontFamily={"heading"}
               >
                 No Matter Who You Are.
               </Text>

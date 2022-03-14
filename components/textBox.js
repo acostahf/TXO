@@ -7,7 +7,9 @@ const textBox = (props) => {
       <Text fontWeight="extrabold" fontSize="2xl" color="brand.300">
         {props.title}
       </Text>
-      <Text mt="2">{props.des}</Text>
+      <Text fontSize={"xs"} mt="2">
+        {props.des}
+      </Text>
       <ButtonGroup mt="20">
         <Button
           rounded="full"

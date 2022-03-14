@@ -41,7 +41,7 @@ const Join = () => {
               justifyContent="center"
               flexDirection="column"
             >
-              <Heading className="element" as="h1" size="xl">
+              <Heading className="element" as="h1" size="lg">
                 JOIN OUR TEAM
               </Heading>
               <Text className="element" fontSize="xs" maxW={"xs"}>
@@ -68,7 +68,7 @@ const Join = () => {
                 borderRadius="3xl"
                 borderColor="brand.200"
                 bg="brand.300"
-                placeholder="EMAIL ADDRESS"
+                placeholder="First and Last Name"
               />
               <Input
                 borderRadius="3xl"
