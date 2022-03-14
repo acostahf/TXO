@@ -14,68 +14,100 @@ import React from "react";
 export const ContactForm = () => {
   return (
     <div>
-      <Flex p="10" bgColor="brand.300">
-        <FormControl>
-          <FormLabel
-            htmlFor="email"
-            fontWeight="bold"
-            fontSize="3xl"
-            color="brand.400"
-          >
-            How May We Help You
-          </FormLabel>
-          <RadioGroup defaultValue="Itachi" color="brand.300">
-            <HStack spacing="24px">
-              <Radio value="Quote">Quote</Radio>
-              <Radio value="Additional Information">
-                Additional Information
-              </Radio>
-            </HStack>
-          </RadioGroup>
-          <Input
-            borderColor="brand.200"
-            id="first"
-            type="first"
-            placeholder="Frist Name"
-          />
-          <Input
-            borderColor="brand.200"
-            id="last"
-            type="last"
-            placeholder="Last Name"
-          />
-          <Input
-            borderColor="brand.200"
-            id="company"
-            type="company"
-            placeholder="Company Name"
-          />
-          <Input
-            borderColor="brand.200"
-            id="email"
-            type="email"
-            placeholder="Email Address"
-          />
-          <Input
-            borderColor="brand.200"
-            id="service"
-            type="service"
-            placeholder="Service Requesting"
-          />
-          <Input
-            borderColor="brand.200"
-            id="reference"
-            type="reference"
-            placeholder="How did you find us"
-          />
-          <Textarea
-            borderColor="brand.200"
-            id="message"
-            type="message"
-            placeholder="message"
-            size="sm"
-          />
-        </FormControl>
+      <Flex
+        bgColor="brand.200"
+        bgImage={"url('/mid-pattern.svg')"}
+        bgPosition="center"
+        bgSize="cover"
+        bgRepeat="no-repeat"
+        maxW={"5xl"}
+      >
+        <Flex p="10" bg={"brand.300"} maxW={"xl"}>
+          <FormControl>
+            <Flex direction={"column"} gap={"5"}>
+              <FormLabel
+                htmlFor="email"
+                fontWeight="bold"
+                fontSize="3xl"
+                color="brand.400"
+              >
+                How May We Help You
+              </FormLabel>
+              <RadioGroup defaultValue="Itachi" color="brand.300">
+                <HStack spacing="24px">
+                  <Radio value="Quote">Quote</Radio>
+                  <Radio value="Additional Information">
+                    Additional Information
+                  </Radio>
+                </HStack>
+              </RadioGroup>
+              <Flex gap={"2"}>
+                <Input
+                  borderRadius={"full"}
+                  borderColor="brand.200"
+                  id="first"
+                  type="first"
+                  placeholder="Frist Name"
+                />
+                <Input
+                  borderRadius={"full"}
+                  borderColor="brand.200"
+                  id="last"
+                  type="last"
+                  placeholder="Last Name"
+                />
+              </Flex>
+              <Flex gap={"2"}>
+                <Input
+                  borderRadius={"full"}
+                  borderColor="brand.200"
+                  id="company"
+                  type="company"
+                  placeholder="Company Name"
+                />
+                <Input
+                  borderRadius={"full"}
+                  borderColor="brand.200"
+                  id="number"
+                  type="number"
+                  placeholder="Phone Number"
+                />
+              </Flex>
+              <Input
+                borderRadius={"full"}
+                borderColor="brand.200"
+                id="email"
+                type="email"
+                placeholder="Email Address"
+              />
+              <Flex gap={"2"}>
+                <Input
+                  borderRadius={"full"}
+                  borderColor="brand.200"
+                  id="service"
+                  type="service"
+                  placeholder="Service Requesting"
+                />
+
+                <Input
+                  borderRadius={"full"}
+                  borderColor="brand.200"
+                  id="reference"
+                  type="reference"
+                  placeholder="How did you find us"
+                />
+              </Flex>
+              <Textarea
+                borderRadius={"xl"}
+                borderColor="brand.200"
+                id="message"
+                type="message"
+                placeholder="message"
+                size="sm"
+              />
+            </Flex>
+          </FormControl>
+        </Flex>
       </Flex>
     </div>
   );

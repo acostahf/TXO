@@ -1,4 +1,5 @@
 import React from "react";
+import { Button, ButtonGroup } from "@chakra-ui/button";
 import {
   Box,
   Flex,
@@ -21,13 +22,13 @@ const list = () => {
   return (
     <box>
       <Stack
-        minH="100vh"
         align="center"
         direction="column"
         bg="brand.400"
         color="brand.300"
-        p="10"
+        p="20"
         spacing="10"
+        justify={"center"}
       >
         <Heading>SAFETY TRAINING</Heading>
         <Text>
@@ -43,34 +44,145 @@ const list = () => {
           columns={2}
           spacing={1}
           gap="3"
-          divider={<StackDivider borderColor="brand.200" />}
+          divider={<StackDivider borderColor="brand.200" w="" />}
         >
           <Flex flexDirection="column" alignItems="end">
-            <Text>OSHA 10-hour</Text>
-            <Text>Bloodborne Pathogens</Text>
-            <Text>Crane Safety</Text>
-            <Text>Electrical Safety</Text>
-            <Text>Emergency Response Planning</Text>
-            <Text>Ergonomics Awareness</Text>
-            <Text>Fall Protection</Text>
-            <Text>Forklift/Powered Industrial Vehicle</Text>
-            <Text>Hazard Communication</Text>
-            <Text>Hearing Protection</Text>
+            <Text
+              fontWeight="semibold"
+              fontSize={{ base: "sm", sm: "lg", lg: "2xl" }}
+            >
+              OSHA 10-hour
+            </Text>
+            <Text
+              fontWeight="semibold"
+              fontSize={{ base: "sm", sm: "lg", lg: "2xl" }}
+            >
+              Bloodborne Pathogens
+            </Text>
+            <Text
+              fontWeight="semibold"
+              fontSize={{ base: "sm", sm: "lg", lg: "2xl" }}
+            >
+              Crane Safety
+            </Text>
+            <Text
+              fontWeight="semibold"
+              fontSize={{ base: "sm", sm: "lg", lg: "2xl" }}
+            >
+              Electrical Safety
+            </Text>
+            <Text
+              fontWeight="semibold"
+              fontSize={{ base: "sm", sm: "lg", lg: "2xl" }}
+            >
+              Emergency Response Planning
+            </Text>
+            <Text
+              fontWeight="semibold"
+              fontSize={{ base: "sm", sm: "lg", lg: "2xl" }}
+            >
+              Ergonomics Awareness
+            </Text>
+            <Text
+              fontWeight="semibold"
+              fontSize={{ base: "sm", sm: "lg", lg: "2xl" }}
+            >
+              Fall Protection
+            </Text>
+            <Text
+              fontWeight="semibold"
+              fontSize={{ base: "sm", sm: "lg", lg: "2xl" }}
+            >
+              Forklift/Powered Industrial Vehicle
+            </Text>
+            <Text
+              fontWeight="semibold"
+              fontSize={{ base: "sm", sm: "lg", lg: "2xl" }}
+            >
+              Hazard Communication
+            </Text>
+            <Text
+              fontWeight="semibold"
+              fontSize={{ base: "sm", sm: "lg", lg: "2xl" }}
+            >
+              Hearing Protection
+            </Text>
           </Flex>
 
           <Flex flexDirection="column">
-            <Text>OSHA 10-hour</Text>
-            <Text>Bloodborne Pathogens</Text>
-            <Text>Crane Safety</Text>
-            <Text>Electrical Safety</Text>
-            <Text>Emergency Response Planning</Text>
-            <Text>Ergonomics Awareness</Text>
-            <Text>Fall Protection</Text>
-            <Text>Forklift/Powered Industrial Vehicle</Text>
-            <Text>Hazard Communication</Text>
-            <Text>Hearing Protection</Text>
+            <Text
+              fontWeight="semibold"
+              fontSize={{ base: "sm", sm: "lg", lg: "2xl" }}
+            >
+              OSHA 10-hour
+            </Text>
+            <Text
+              fontWeight="semibold"
+              fontSize={{ base: "sm", sm: "lg", lg: "2xl" }}
+            >
+              Bloodborne Pathogens
+            </Text>
+            <Text
+              fontWeight="semibold"
+              fontSize={{ base: "sm", sm: "lg", lg: "2xl" }}
+            >
+              Crane Safety
+            </Text>
+            <Text
+              fontWeight="semibold"
+              fontSize={{ base: "sm", sm: "lg", lg: "2xl" }}
+            >
+              Electrical Safety
+            </Text>
+            <Text
+              fontWeight="semibold"
+              fontSize={{ base: "sm", sm: "lg", lg: "2xl" }}
+            >
+              Emergency Response Planning
+            </Text>
+            <Text
+              fontWeight="semibold"
+              fontSize={{ base: "sm", sm: "lg", lg: "2xl" }}
+            >
+              Ergonomics Awareness
+            </Text>
+            <Text
+              fontWeight="semibold"
+              fontSize={{ base: "sm", sm: "lg", lg: "2xl" }}
+            >
+              Fall Protection
+            </Text>
+            <Text
+              fontWeight="semibold"
+              fontSize={{ base: "sm", sm: "lg", lg: "2xl" }}
+            >
+              Forklift/Powered Industrial Vehicle
+            </Text>
+            <Text
+              fontWeight="semibold"
+              fontSize={{ base: "sm", sm: "lg", lg: "2xl" }}
+            >
+              Hazard Communication
+            </Text>
+            <Text
+              fontWeight="semibold"
+              fontSize={{ base: "sm", sm: "lg", lg: "2xl" }}
+            >
+              Hearing Protection
+            </Text>
           </Flex>
         </HStack>
+        <ButtonGroup mt="20">
+          <Button
+            rounded="full"
+            px="10"
+            bgColor="brand.200"
+            color="white"
+            variant="solid"
+          >
+            GET IN TOUCH
+          </Button>
+        </ButtonGroup>
       </Stack>
     </box>
   );

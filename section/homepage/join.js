@@ -8,35 +8,47 @@ import {
   SimpleGrid,
   Text,
 } from "@chakra-ui/layout";
-import { Input, InputGroup, InputRightAddon, Textarea } from "@chakra-ui/react";
+import {
+  Input,
+  InputGroup,
+  InputRightAddon,
+  Textarea,
+  Button,
+} from "@chakra-ui/react";
 
 const Join = () => {
   return (
     <Box>
-      <SimpleGrid minH="50vh" columns={3} bg="brand.200" color="brand.200">
+      <SimpleGrid
+        columns={{ base: 1, sm: 1, md: 3 }}
+        bg="brand.200"
+        color="brand.200"
+      >
         <GridItem
           bg="gray.300"
           colSpan={2}
           p="10"
           backgroundImage="url('/staircase-to-worker.jpg')"
-          backgroundPosition="center"
+          backgroundPosition="left"
           backgroundRepeat="no-repeat"
           backgroundSize="cover"
         >
           {/* <Image src="/staircase-to-worker.jpg" alt="staircase" layout="fill" /> */}
-          <Flex
-            maxW="sm"
-            zIndex="2"
-            justifyContent="center"
-            flexDirection="column"
-          >
-            <Heading className="element" as="h1" size="xl">
-              JOIN OUT TEAM
-            </Heading>
-            <Text className="element" fontSize="xs">
-              Looking at safety roles? Join our roster and be paired with a
-              jobsite across the country with competitive pay. The TXO way!
-            </Text>
+          <Flex height={"full"}>
+            <Flex
+              maxW="sm"
+              zIndex="2"
+              justifyContent="center"
+              flexDirection="column"
+            >
+              <Heading className="element" as="h1" size="xl">
+                JOIN OUR TEAM
+              </Heading>
+              <Text className="element" fontSize="xs" maxW={"xs"}>
+                Looking at safety roles? Join our roster and be paired with a
+                jobsite across the country with competitive pay. The TXO way!
+              </Text>
+            </Flex>
           </Flex>
         </GridItem>
         <GridItem>
@@ -45,7 +57,11 @@ const Join = () => {
             align="center"
             flexDirection="column"
             p="10"
-            height="lg"
+            bgImage={"url('/mid-pattern.svg')"}
+            bgPosition="center"
+            bgSize="cover"
+            bgRepeat="no-repeat"
+            // height="lg"
           >
             <InputGroup className="element" flexDirection="column" gap="4">
               <Input
@@ -67,6 +83,9 @@ const Join = () => {
                 placeholder="EMAIL ADDRESS"
                 size="lg"
               />
+              <Button borderRadius="3xl" color="brand.300" bg="brand.400">
+                GET IN TOUCH
+              </Button>
             </InputGroup>
           </Flex>
         </GridItem>

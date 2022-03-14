@@ -25,9 +25,9 @@ const servicesItems = [
 
 const Services = (props) => {
   return (
-    <VStack bg="brand.400" color="brand.300">
-      <Flex align="center" px="20" minH="container.sm">
-        <SimpleGrid columns="2">
+    <VStack bg="brand.400" color="brand.300" p={"10"}>
+      <Flex align="center" px={{ sm: 10, md: 20 }} minH="container.sm">
+        <SimpleGrid columns={{ base: 1, sm: 1, md: 2 }}>
           <Box
             // bgColor="gray.300"
             position="relative"
@@ -40,7 +40,7 @@ const Services = (props) => {
               width="654"
               height="499"
             />
-            <Box
+            {/* <Box
               as="button"
               px="4"
               py="2"
@@ -81,13 +81,13 @@ const Services = (props) => {
               left="-10"
             >
               TRUSTED
-            </Box>
+            </Box> */}
           </Box>
           <TextBox title={servicesItems[0].title} des={servicesItems[0].des} />
         </SimpleGrid>
       </Flex>
-      <Flex align="center" px="20" minH="container.sm">
-        <SimpleGrid columns="2">
+      <Flex align="center" px={{ sm: 10, md: 20 }} minH="container.sm">
+        <SimpleGrid columns={{ base: 1, sm: 1, md: 2 }}>
           <TextBox title={servicesItems[1].title} des={servicesItems[1].des} />
           <Box position="relative">
             <Image
@@ -100,8 +100,8 @@ const Services = (props) => {
           </Box>
         </SimpleGrid>
       </Flex>
-      <Flex align="center" px="20" minH="container.sm">
-        <SimpleGrid columns="2">
+      <Flex align="center" px={{ sm: 10, md: 20 }} minH="container.sm">
+        <SimpleGrid columns={{ base: 1, sm: 1, md: 2 }}>
           <Box position="relative">
             <Image
               src={servicesItems[2].src}

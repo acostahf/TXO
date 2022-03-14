@@ -3,7 +3,7 @@ import { Flex, Box, Text, Center, SimpleGrid } from "@chakra-ui/layout";
 
 const textBox = (props) => {
   return (
-    <Flex direction="column" p="10">
+    <Flex direction="column" p={{ base: 0, sm: 10 }}>
       <Text fontWeight="extrabold" fontSize="2xl" color="brand.300">
         {props.title}
       </Text>

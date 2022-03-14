@@ -21,12 +21,13 @@ const AboutHero = (props) => {
             Who We Are
           </Heading>
         </Flex>
-        <HStack
+        <SimpleGrid
           p="10"
-          justify="center"
-          divider={<StackDivider borderColor="gray.200" />}
+          columns={{ base: 1, sm: 1, md: 2 }}
+          // justify="center"
+          // divider={<StackDivider borderColor="gray.200" />}
         >
-          <Flex maxW="2xl" align="start" flexDirection="column" p="10">
+          <Flex align="start" flexDirection="column" p="10">
             <Box position="relative">
               <Image src="/values.png" alt="Values" width="600" height="462" />
             </Box>
@@ -42,7 +43,7 @@ const AboutHero = (props) => {
             </Text>
           </Flex>
 
-          <Flex maxW="2xl" align="start" flexDirection="column" p="10">
+          <Flex align="start" flexDirection="column" p="10">
             <Box position="relative">
               <Image src="/values.png" alt="Values" width="600" height="462" />
             </Box>
@@ -56,7 +57,7 @@ const AboutHero = (props) => {
               determination in everything we do.
             </Text>
           </Flex>
-        </HStack>
+        </SimpleGrid>
       </Stack>
     </Box>
   );

@@ -40,7 +40,7 @@ const Promises = (props) => {
       direction="column"
       className="section"
       bg="brand.300"
-      p="20"
+      p="10"
       spacing="10"
     >
       <Heading className="title" mb="20">
@@ -49,7 +49,11 @@ const Promises = (props) => {
       <Flex align="center" justify="center">
         <Wrap justify="center">
           {cardItems.map((items, i) => (
-            <WrapItem key={i} className="promises">
+            <WrapItem
+              key={i}
+              className="promises"
+              paddingBottom={{ base: "20" }}
+            >
               <Card
                 title={items.title}
                 description={items.description}
