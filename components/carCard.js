@@ -22,9 +22,9 @@ const carCard = (props) => {
           priority
         />
       </Box>
-      <Heading pt="2" as="h6" fontSize="xl" mb="2">
+      <Text fontWeight={"bold"} pt="2" as="h6" fontSize="xl" mb="2">
         {props.title}
-      </Heading>
+      </Text>
       <Text fontSize="sm" align="center">
         {props.description}
       </Text>

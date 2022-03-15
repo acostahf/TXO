@@ -25,7 +25,15 @@ const servicesItems = [
 
 const Services = (props) => {
   return (
-    <VStack bg="brand.400" color="brand.300" p={"10"}>
+    <VStack
+      bg="brand.400"
+      bgImage={"url('/mid-pattern.svg')"}
+      bgPosition="center"
+      bgSize="cover"
+      bgRepeat="no-repeat"
+      color="brand.300"
+      p={"10"}
+    >
       <Flex align="center" px={{ sm: 10, md: 20 }} minH="container.sm">
         <SimpleGrid columns={{ base: 1, sm: 1, md: 2 }}>
           <Box

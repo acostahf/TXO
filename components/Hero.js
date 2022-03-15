@@ -14,7 +14,7 @@ export const Hero = () => {
   return (
     <Box>
       <SimpleGrid
-        minH="100vh"
+        minH="80vh"
         columns={{ base: 1, sm: 1, md: 2 }}
         bg="brand.200"
         bgImage={"url('/mid-pattern.svg')"}
@@ -26,14 +26,14 @@ export const Hero = () => {
         <Flex justify="center" align="center" flexDirection="column" p="10">
           <Stack spacing={10}>
             <Box>
-              <Text
+              <Heading
                 className="element"
                 // fontWeight="semibold"
-                fontSize="xl"
+                fontSize="md"
                 // fontFamily={"heading"}
               >
                 No Matter Who You Are.
-              </Text>
+              </Heading>
               <Heading className="element" as="h1" size="4xl">
                 Safety <br /> Made Easy.
               </Heading>

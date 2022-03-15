@@ -96,7 +96,7 @@ export default function WithSubnavigation() {
         bg="brand.400"
         color={useColorModeValue("gray.600", "white")}
         minH={"60px"}
-        py={{ base: 2 }}
+        py={{ base: 5 }}
         px={{ base: 4 }}
         align={"center"}
       >
@@ -120,13 +120,13 @@ export default function WithSubnavigation() {
               className="box"
               textColor="white"
               fontWeight="bold"
-              px="8"
+              px={{ base: "0", sm: "8" }}
               py="1"
             >
               <Image
                 src="/nav-logo.png"
-                width="125"
-                height="54"
+                width="100"
+                height="35"
                 alt="TXO Logo"
               />
             </Link>
@@ -146,11 +146,11 @@ export default function WithSubnavigation() {
             <Link
               className="box"
               textColor="white"
-              fontWeight="bold"
+              fontSize={{ base: "xx-small", sm: "sm" }}
               bg="brand.200"
               rounded="full"
-              px="8"
-              py="1"
+              px={{ base: "2", sm: "8" }}
+              py={{ base: "2", sm: "2" }}
             >
               GET IN TOUCH
             </Link>
@@ -171,7 +171,7 @@ const DesktopNav = () => {
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
 
   return (
-    <Stack direction={"row"} spacing={4}>
+    <Stack direction={"row"} spacing={4} align="center">
       {NavItems.map((navItem) => (
         <Box key={navItem.label}>
           <Popover trigger={"hover"} placement={"bottom-start"}>
@@ -180,7 +180,7 @@ const DesktopNav = () => {
                 <Link
                   p={2}
                   fontSize={"sm"}
-                  fontWeight={500}
+                  fontWeight={"bold"}
                   color={linkColor}
                   _hover={{
                     textDecoration: "none",

@@ -20,9 +20,14 @@ const Join = () => {
   return (
     <Box>
       <SimpleGrid
+        minH={"30vh"}
         columns={{ base: 1, sm: 1, md: 3 }}
         bg="brand.200"
         color="brand.200"
+        bgImage={"url('/mid-pattern.svg')"}
+        bgPosition="center"
+        bgSize="cover"
+        bgRepeat="no-repeat"
       >
         <GridItem
           bg="gray.300"
@@ -44,7 +49,7 @@ const Join = () => {
               <Heading className="element" as="h1" size="lg">
                 JOIN OUR TEAM
               </Heading>
-              <Text className="element" fontSize="xs" maxW={"xs"}>
+              <Text className="element" fontSize="sm" maxW={"xs"}>
                 Looking at safety roles? Join our roster and be paired with a
                 jobsite across the country with competitive pay. The TXO way!
               </Text>
@@ -57,10 +62,8 @@ const Join = () => {
             align="center"
             flexDirection="column"
             p="10"
-            bgImage={"url('/mid-pattern.svg')"}
-            bgPosition="center"
-            bgSize="cover"
-            bgRepeat="no-repeat"
+            h={"full"}
+
             // height="lg"
           >
             <InputGroup className="element" flexDirection="column" gap="4">

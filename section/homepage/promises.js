@@ -35,7 +35,7 @@ const cardItems = [
 
 const Promises = (props) => {
   return (
-    <VStack
+    <Flex
       align="center"
       direction="column"
       className="section"
@@ -64,10 +64,10 @@ const Promises = (props) => {
           ))}
         </Wrap>
       </Flex>
-      <Button borderRadius="3xl" color="brand.300" bg="brand.400">
+      <Button borderRadius="full" color="brand.300" bg="brand.400">
         GET IN TOUCH
       </Button>
-    </VStack>
+    </Flex>
   );
 };
 

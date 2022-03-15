@@ -12,7 +12,7 @@ const theme = extendTheme({
   },
   fonts: {
     heading: "Akira, sans-serif",
-    body: "Akira, sans-serif",
+    body: "Roboto, sans-serif",
   },
 });
 export default theme;

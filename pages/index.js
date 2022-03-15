@@ -30,8 +30,8 @@ export default function Home() {
     });
     // tl.to(".element", { duration: 2, x: 500 });
     //
-    tl2.from(".title", { duration: 1, opacity: 0, x: 100 });
-    tl2.from(".promises", { duration: 1, y: 100, opacity: 0 });
+    // tl2.from(".title", { duration: 1, opacity: 0, x: 100 });
+    // tl2.from(".promises", { duration: 1, y: 100, opacity: 0 });
     // tl2.to(".section", { x: 900, duration: 2, opacity: 0 });
   });
   return (
