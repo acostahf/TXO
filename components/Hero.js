@@ -59,6 +59,7 @@ export const Hero = () => {
           </Stack>
         </Flex>
         <GridItem
+          h={{ sm: "0", md: "auto" }}
           bg="gray.300"
           position="relative"
           bgImage="url('/header.jpg') "
