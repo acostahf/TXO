@@ -44,10 +44,13 @@ export const Hero = () => {
                 borderColor="brand.200"
                 bg="brand.300"
                 placeholder="EMAIL ADDRESS"
+                fontFamily={"heading"}
+                fontSize={"sm"}
               />
               <InputRightAddon
                 borderRightRadius="3xl"
                 borderColor="brand.200"
+                fontFamily={"heading"}
                 bg="brand.400"
               >
                 GET IN TOUCH

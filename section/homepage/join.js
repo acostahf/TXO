@@ -20,7 +20,7 @@ const Join = () => {
   return (
     <Box>
       <SimpleGrid
-        minH={"30vh"}
+        minH={"40vh"}
         columns={{ base: 1, sm: 1, md: 3 }}
         bg="brand.200"
         color="brand.200"
