@@ -19,7 +19,7 @@ const servicesItems = [
   {
     title: "SAFETY TRAINING",
     des: "Providing your employees with the necessary and relevant safety training is key in preventing potential incidents, creating a safe work environment, and dramatically lowering the impact of your insurance costs. TXO’s highly customizable trainings in many different courses gives your employees the knowledge they need on the jobsite. With our flexible training schedule we can implement trainings weekly, monthly, or as a needed basis.",
-    src: "/safety-training.jpg",
+    src: "/safety-training.png",
   },
 ];
 
