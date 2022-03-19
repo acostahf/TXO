@@ -35,7 +35,7 @@ export const Hero = () => {
                 No Matter Who You Are.
               </Heading>
               <Heading className="element" as="h1" size="4xl">
-                Safety <br /> Made Easy.
+                Safety <br /> Made Easy
               </Heading>
             </Box>
             <InputGroup className="element">
