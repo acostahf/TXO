@@ -19,6 +19,7 @@ const Footer = () => {
           align="center"
           gap="4"
           fontWeight="extrabold"
+          fontFamily={"heading"}
           fontSize={"sm"}
         >
           <NextLink href="/services" passHref>

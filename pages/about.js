@@ -32,12 +32,15 @@ const About = () => {
               borderLeftRadius="3xl"
               borderColor="brand.300"
               bg="white"
+              fontFamily={"heading"}
               placeholder="EMAIL ADDRESS"
             />
             <InputRightAddon
               borderRightRadius="3xl"
               borderColor="brand.200"
               bg="brand.400"
+              fontFamily={'heading'}
+              fontSize={"sm"}
               color="brand.300"
               // children="GET IN TOUCH"
             >
