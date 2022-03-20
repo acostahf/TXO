@@ -17,7 +17,7 @@ const AboutHero = (props) => {
     <Box>
       <Stack minH="90vh"  bgGradient={["linear( brand.400 ,  brand.600 )"]} color="brand.300">
         <Flex paddingTop="10" justify="center">
-          <Heading className="element" fontSize="5xl" fontWeight="bold" as="h1" color={"brand.300"}>
+          <Heading className="element" fontSize={{base: "2xl",md:"5xl"}} fontWeight="bold" as="h1" color={"brand.300"}>
             Who We Are
           </Heading>
         </Flex>
@@ -27,7 +27,7 @@ const AboutHero = (props) => {
           // justify="center"
           // divider={<StackDivider borderColor="gray.200" />}
         >
-          <Flex align="start" flexDirection="column" p="10">
+          <Flex align="start" flexDirection="column" p={{base: "5", sm: "10"}}>
             <Box position="relative">
               <Image src="/values.png" alt="Values" width="600" height="462" />
             </Box>
@@ -43,7 +43,7 @@ const AboutHero = (props) => {
             </Text>
           </Flex>
 
-          <Flex align="start" flexDirection="column" p="10">
+          <Flex align="start" flexDirection="column" p={{base: "5", sm: "10"}}>
             <Box position="relative">
               <Image src="/values.png" alt="Values" width="600" height="462" />
             </Box>
