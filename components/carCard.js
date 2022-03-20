@@ -22,7 +22,7 @@ const carCard = (props) => {
           priority
         />
       </Box>
-      <Text fontWeight={"bold"} pt="2" as="h6" fontSize="xl" mb="2">
+      <Text fontWeight={"bold"} pt="2"  fontSize={{base: "sm" ,md:"xl" }}mb="2">
         {props.title}
       </Text>
       <Text fontSize="sm" align="center">

@@ -49,10 +49,18 @@ const Carousel = () => {
     loop: true,
     renderMode: "performance",
     initial: 0,
-    slides: {
-      perView: 5,
-      spacing: 5,
+    breakpoints: {
+      "(min-width: 400px)": {
+        slides: { perView: 3, spacing: 5 },
+      },
+      "(min-width: 1000px)": {
+        slides: { perView: 5, spacing: 5 },
+      },
     },
+    // slides: {
+    //   perView: 5,
+    //   spacing: 5,
+    // },
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel);
     },
@@ -84,7 +92,7 @@ const Carousel = () => {
   // });
 
   return (
-    <Flex py="10" align="center" direction="column" bg="brand.300">
+    <Flex py="10" px={{base: "5", sm: "0" }} align="center" direction="column" bg="brand.300">
       <Heading fontSize="3xl" fontWeight="extrabold">
         INDUSTRIES WE SERVICE
       </Heading>

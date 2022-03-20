@@ -64,6 +64,7 @@ const Services = (props) => {
               layout="responsive"
               width="654"
               height="499"
+              priority
             />
           </Box>
         </SimpleGrid>
@@ -77,6 +78,7 @@ const Services = (props) => {
               layout="responsive"
               width="654"
               height="499"
+              priority
             />
           </Box>
           <TextBox title={servicesItems[2].title} des={servicesItems[2].des} />
