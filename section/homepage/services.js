@@ -47,6 +47,7 @@ const Services = (props) => {
               layout="responsive"
               width="654"
               height="499"
+              priority
             />
             {/* <Box
               as="button"

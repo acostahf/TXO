@@ -29,28 +29,29 @@ export const Hero = () => {
               <Heading
                 className="element"
                 // fontWeight="semibold"
-                fontSize="md"
-                // fontFamily={"heading"}
+                fontSize="xl"
+                fontFamily={"body"}
               >
                 No Matter Who You Are.
               </Heading>
               <Heading className="element" as="h1" size="4xl">
-                Safety <br /> Made Easy
+                Safety <br /> Made Easy.
               </Heading>
             </Box>
-            <InputGroup className="element">
+            <InputGroup className="element" maxW={"xl"}>
               <Input
                 borderLeftRadius="3xl"
                 borderColor="brand.200"
                 bg="brand.300"
                 placeholder="EMAIL ADDRESS"
                 fontFamily={"heading"}
-                fontSize={"sm"}
+                fontSize={"x-small"}
               />
               <InputRightAddon
                 borderRightRadius="3xl"
                 borderColor="brand.200"
                 fontFamily={"heading"}
+                fontSize={"sm"}
                 bg="brand.400"
               >
                 GET IN TOUCH

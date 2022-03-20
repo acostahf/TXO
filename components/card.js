@@ -25,7 +25,7 @@ const Card = (props) => {
       >
         <Image src={props.img} alt="header imager" layout="fill" priority />
       </Box>
-      <Heading pt="10" pb="5" size={"xs"} mb="2">
+      <Heading pt="10" pb="5" size={"xs"} mb="2" fontFamily={"body"}>
         {props.title}
       </Heading>
       <Text lineHeight={"taller"} fontSize="sm" align="center">

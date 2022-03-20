@@ -64,7 +64,7 @@ const Promises = (props) => {
           ))}
         </Wrap>
       </Flex>
-      <Button borderRadius="full" color="brand.300" bg="brand.400">
+      <Button borderRadius="full" color="brand.300" bg="brand.400" fontFamily={"heading"} px={"8"} py={"6"} fontSize={"sm"}  _hover={{ bg: 'brand.100' }}>
         GET IN TOUCH
       </Button>
     </Flex>

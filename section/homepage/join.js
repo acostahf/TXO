@@ -14,6 +14,7 @@ import {
   InputRightAddon,
   Textarea,
   Button,
+  ButtonGroup
 } from "@chakra-ui/react";
 
 const Join = () => {
@@ -70,25 +71,40 @@ const Join = () => {
               <Input
                 borderRadius="3xl"
                 borderColor="brand.200"
+                fontSize={"md"}
                 bg="brand.300"
                 placeholder="First and Last Name"
               />
               <Input
                 borderRadius="3xl"
                 borderColor="brand.200"
+                fontSize={"md"}
                 bg="brand.300"
-                placeholder="EMAIL ADDRESS"
+                placeholder="Email Address"
               />
               <Textarea
                 borderRadius="md"
                 borderColor="brand.200"
+                fontSize={"md"}
+                h={"32"}
                 bg="brand.300"
-                placeholder="EMAIL ADDRESS"
+                placeholder="Brief Message"
                 size="lg"
               />
-              <Button borderRadius="3xl" color="brand.300" bg="brand.400">
-                GET IN TOUCH
-              </Button>
+               <ButtonGroup >
+                  <Button
+                    rounded="full"
+                    px="6"
+                    bgColor="brand.400"
+                    _hover={{ bg: 'brand.100' }}
+                    color="white"
+                    variant="solid"
+                    fontFamily={"heading"}
+                    fontSize={"x-small"}
+                  >
+                     GET IN TOUCH
+                    </Button>
+                  </ButtonGroup>
             </InputGroup>
           </Flex>
         </GridItem>
