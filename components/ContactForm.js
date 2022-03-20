@@ -23,9 +23,9 @@ export const ContactForm = () => {
         bgSize="cover"
         bgRepeat="no-repeat"
         maxW={"5xl"}
-      
+    
       >
-        <Flex p="10" bg={"brand.300"} minW={"2xl"}>
+        <Flex p={{base: "5", sm:"10"}} bg={"brand.300"} >
           <FormControl>
             <Flex direction={"column"} gap={"5"}>
               <FormLabel
@@ -45,7 +45,7 @@ export const ContactForm = () => {
                   </Radio>
                 </HStack>
               </RadioGroup>
-              <Flex gap={"2"}>
+              <Flex gap={"2"} direction={{base: "column", md: "row"}} >
                 <Input
                   borderRadius={"full"}
                   borderColor="brand.200"
@@ -61,7 +61,7 @@ export const ContactForm = () => {
                   placeholder="Last Name"
                 />
               </Flex>
-              <Flex gap={"2"}>
+              <Flex gap={"2"} direction={{base: "column", md: "row"}} >
                 <Input
                   borderRadius={"full"}
                   borderColor="brand.200"
@@ -84,7 +84,7 @@ export const ContactForm = () => {
                 type="email"
                 placeholder="Email Address"
               />
-              <Flex gap={"2"}>
+              <Flex gap={"2"} direction={{base: "column", md: "row"}} >
                 <Input
                   borderRadius={"full"}
                   borderColor="brand.200"
