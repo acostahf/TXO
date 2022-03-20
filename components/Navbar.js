@@ -148,6 +148,8 @@ export default function WithSubnavigation() {
               textColor="white"
               fontSize={{ base: "xx-small", sm: "sm" }}
               bg="brand.200"
+              _hover={{ bg: 'brand.100' }}
+              fontFamily={"heading"}
               rounded="full"
               px={{ base: "2", sm: "8" }}
               py={{ base: "2", sm: "2" }}
@@ -171,7 +173,7 @@ const DesktopNav = () => {
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
 
   return (
-    <Stack direction={"row"} spacing={4} align="center">
+    <Stack direction={"row"} spacing={8} align="center">
       {NavItems.map((navItem) => (
         <Box key={navItem.label}>
           <Popover trigger={"hover"} placement={"bottom-start"}>
@@ -182,6 +184,7 @@ const DesktopNav = () => {
                   fontSize={"sm"}
                   fontWeight={"bold"}
                   color={linkColor}
+                  fontFamily={"heading"}
                   _hover={{
                     textDecoration: "none",
                     color: linkHoverColor,

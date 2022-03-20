@@ -34,7 +34,7 @@ const AboutHero = (props) => {
             <Text fontWeight="semibold" fontSize="4xl" paddingBottom="5">
               MISSION
             </Text>
-            <Text fontSize="md">
+            <Text fontSize="sm" >  
               We provide safety that doesn’t break the bank and doesn’t give you
               a headache. For so long in our business, general contractors,
               construction managers, and the like have put safety as a last

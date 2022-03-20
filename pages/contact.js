@@ -13,18 +13,18 @@ const Contact = () => {
       direction={"column"}
       justify="center"
       minH="100vh"
-      bgGradient={["linear( brand.400 70%,  brand.200 )"]}
-      // bgColor="brand.400"
+      bgGradient={["linear( brand.400 ,  brand.600 )"]}
       color="brand.300"
-      gap={"10"}
+      gap={"20"}
+      p={"20"}
     >
-      <Box justify="center" align="center">
-        <Heading className="element" as="h1" fontWeight="bold" fontSize="5xl">
+      <Box justify="center" align="center" >
+        <Heading className="element" as="h1" fontWeight="bold" fontSize="5xl" paddingBottom={"6"}>
           WE ARE JUST A FEW CLICKS AWAY.
         </Heading>
-        <Text>Get In Contact With Us. We Don’t Bite.</Text>
+        <Text fontWeight={"bold"}>Get In Contact With Us. We Don’t Bite.</Text>
       </Box>
-      <Box paddingTop="10" justify="center" align="center">
+      <Box paddingTop="10" justify="center" align="center" p={"10"}>
         <ContactForm />
       </Box>
     </Flex>

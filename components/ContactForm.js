@@ -8,6 +8,8 @@ import {
   HStack,
   Radio,
   Textarea,
+  Button,
+  ButtonGroup
 } from "@chakra-ui/react";
 import React from "react";
 
@@ -21,17 +23,19 @@ export const ContactForm = () => {
         bgSize="cover"
         bgRepeat="no-repeat"
         maxW={"5xl"}
+      
       >
-        <Flex p="10" bg={"brand.300"} maxW={"xl"}>
+        <Flex p="10" bg={"brand.300"} minW={"2xl"}>
           <FormControl>
             <Flex direction={"column"} gap={"5"}>
               <FormLabel
                 htmlFor="email"
                 fontWeight="bold"
-                fontSize="3xl"
+                fontFamily={"heading"}
+                fontSize="xl"
                 color="brand.400"
               >
-                How May We Help You
+                How May We Help You?
               </FormLabel>
               <RadioGroup defaultValue="Itachi" color="brand.300">
                 <HStack spacing="24px">
@@ -105,6 +109,20 @@ export const ContactForm = () => {
                 placeholder="message"
                 size="sm"
               />
+               <ButtonGroup >
+                  <Button
+                    rounded="full"
+                    px="6"
+                    bgColor="brand.200"
+                    _hover={{ bg: 'brand.100' }}
+                    color="white"
+                    variant="solid"
+                    fontFamily={"heading"}
+                    fontSize={"x-small"}
+                  >
+                     GET IN TOUCH
+                    </Button>
+                  </ButtonGroup>
             </Flex>
           </FormControl>
         </Flex>
