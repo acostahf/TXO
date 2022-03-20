@@ -13,7 +13,7 @@ export const ServicesHero = () => {
       <Flex minH="50vh" paddingTop="10" align="center" justify="center">
         <Heading
           className="element"
-          fontSize="5xl"
+          fontSize={{ base: "3xl" ,sm: "5xl"}}
           fontWeight="extrabold"
           textAlign="center"
           as="h1"
