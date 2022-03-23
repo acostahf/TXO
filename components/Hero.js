@@ -17,7 +17,7 @@ export const Hero = () => {
         minH="80vh"
         columns={{ base: 1, sm: 1, md: 2 }}
         bg="brand.200"
-        bgImage={"url('/mid-pattern.svg')"}
+        bgImage={"url('/header.svg')"}
         bgPosition="center"
         bgSize="cover"
         bgRepeat="no-repeat"

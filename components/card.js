@@ -23,7 +23,9 @@ const Card = (props) => {
         rounded="full"
         mb="2"
       >
-        <Image src={props.img} alt="header imager" layout="fill" priority />
+        <Flex justify={"center"} align={"center"} h="28" >
+        <Image src={props.img} alt="header imager" width={88} height={88} priority />
+        </Flex>
       </Box>
       <Heading pt="10" pb="5" size={"xs"} mb="2" fontFamily={"body"}>
         {props.title}

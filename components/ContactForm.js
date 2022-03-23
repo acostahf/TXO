@@ -18,11 +18,11 @@ export const ContactForm = () => {
     <div>
       <Flex
         bgColor="brand.200"
-        bgImage={"url('/mid-pattern.svg')"}
+        bgImage={"url('/header.svg')"}
         bgPosition="center"
         bgSize="cover"
         bgRepeat="no-repeat"
-        maxW={"5xl"}
+        maxW={"6xl"}
     
       >
         <Flex p={{base: "5", sm:"10"}} bg={"brand.300"} >
@@ -38,9 +38,9 @@ export const ContactForm = () => {
                 How May We Help You?
               </FormLabel>
               <RadioGroup defaultValue="Itachi" color="brand.300">
-                <HStack spacing="24px">
-                  <Radio value="Quote">Quote</Radio>
-                  <Radio value="Additional Information">
+                <HStack spacing="24px" color={"brand.400"}>
+                  <Radio   borderColor="brand.200" value="Quote">Quote</Radio>
+                  <Radio   borderColor="brand.200" value="Additional Information">
                     Additional Information
                   </Radio>
                 </HStack>
@@ -49,6 +49,7 @@ export const ContactForm = () => {
                 <Input
                   borderRadius={"full"}
                   borderColor="brand.200"
+                  borderWidth={"2px"}
                   id="first"
                   type="first"
                   placeholder="Frist Name"
@@ -56,6 +57,7 @@ export const ContactForm = () => {
                 <Input
                   borderRadius={"full"}
                   borderColor="brand.200"
+                  borderWidth={"2px"}
                   id="last"
                   type="last"
                   placeholder="Last Name"
@@ -65,6 +67,7 @@ export const ContactForm = () => {
                 <Input
                   borderRadius={"full"}
                   borderColor="brand.200"
+                  borderWidth={"2px"}
                   id="company"
                   type="company"
                   placeholder="Company Name"
@@ -72,6 +75,7 @@ export const ContactForm = () => {
                 <Input
                   borderRadius={"full"}
                   borderColor="brand.200"
+                  borderWidth={"2px"}
                   id="number"
                   type="number"
                   placeholder="Phone Number"
@@ -80,6 +84,7 @@ export const ContactForm = () => {
               <Input
                 borderRadius={"full"}
                 borderColor="brand.200"
+                borderWidth={"2px"}
                 id="email"
                 type="email"
                 placeholder="Email Address"
@@ -88,6 +93,7 @@ export const ContactForm = () => {
                 <Input
                   borderRadius={"full"}
                   borderColor="brand.200"
+                  borderWidth={"2px"}
                   id="service"
                   type="service"
                   placeholder="Service Requesting"
@@ -96,6 +102,7 @@ export const ContactForm = () => {
                 <Input
                   borderRadius={"full"}
                   borderColor="brand.200"
+                  borderWidth={"2px"}
                   id="reference"
                   type="reference"
                   placeholder="How did you find us"
@@ -104,6 +111,7 @@ export const ContactForm = () => {
               <Textarea
                 borderRadius={"xl"}
                 borderColor="brand.200"
+                borderWidth={"2px"}
                 id="message"
                 type="message"
                 placeholder="message"

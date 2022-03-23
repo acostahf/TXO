@@ -14,7 +14,7 @@ const Services = () => {
     <div>
       <ServicesHero />
       <List />
-      <Reviews />
+      {/* <Reviews /> */}
     </div>
   );
 };

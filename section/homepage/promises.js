@@ -43,7 +43,7 @@ const Promises = (props) => {
       p="10"
       spacing="10"
     >
-      <Heading className="title" mb="20">
+      <Heading className="title" mb="20" fontSize={"3xl"}>
         The TXO PROMISE
       </Heading>
       <Flex align="center" justify="center">

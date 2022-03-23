@@ -35,7 +35,7 @@ const Wipe = styled.div`
   height: 100vh;
   z-index: 5;
   transform: translateY(100%);
-  background-color: #eefff7;
+  background-color: #5D8D10;
 `;
 
 const PageTransitions = ({ children, route }) => {
