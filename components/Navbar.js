@@ -50,7 +50,7 @@ export default function WithSubnavigation() {
             aria-label={"Toggle Navigation"}
           />
         </Flex>
-        <Flex flex={{ base: 1 }} justify={{ base: "end", md: "start" }}>
+        <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
           <NextLink href="/" passHref bg="brand.100">
             <Link
               className="box"
