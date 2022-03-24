@@ -15,9 +15,19 @@ import Image from "next/image";
 const AboutHero = (props) => {
   return (
     <Box>
-      <Stack minH="90vh"  bgGradient={["linear( brand.400 ,  brand.600 )"]} color="brand.300">
+      <Stack
+        // minH="90vh"
+        bgGradient={["linear( brand.400 ,  brand.600 )"]}
+        color="brand.300"
+      >
         <Flex paddingTop="10" justify="center">
-          <Heading className="element" fontSize={{base: "2xl",md:"5xl"}} fontWeight="bold" as="h1" color={"brand.300"}>
+          <Heading
+            className="element"
+            fontSize={{ base: "2xl", md: "5xl" }}
+            fontWeight="bold"
+            as="h1"
+            color={"brand.300"}
+          >
             Who We Are
           </Heading>
         </Flex>
@@ -27,14 +37,18 @@ const AboutHero = (props) => {
           // justify="center"
           // divider={<StackDivider borderColor="gray.200" />}
         >
-          <Flex align="start" flexDirection="column" p={{base: "5", sm: "10"}}>
+          <Flex
+            align="start"
+            flexDirection="column"
+            p={{ base: "5", sm: "10" }}
+          >
             <Box position="relative">
               <Image src="/values.png" alt="Values" width="600" height="462" />
             </Box>
             <Text fontWeight="semibold" fontSize="4xl" paddingBottom="5">
               MISSION
             </Text>
-            <Text fontSize="sm" >  
+            <Text fontSize="md">
               We provide safety that doesn’t break the bank and doesn’t give you
               a headache. For so long in our business, general contractors,
               construction managers, and the like have put safety as a last
@@ -43,9 +57,18 @@ const AboutHero = (props) => {
             </Text>
           </Flex>
 
-          <Flex align="start" flexDirection="column" p={{base: "5", sm: "10"}}>
+          <Flex
+            align="start"
+            flexDirection="column"
+            p={{ base: "5", sm: "10" }}
+          >
             <Box position="relative">
-              <Image src="/values.png" alt="Values" width="600" height="462" />
+              <Image
+                src="/valuesPic.png"
+                alt="Values"
+                width="600"
+                height="462"
+              />
             </Box>
             <Text fontWeight="semibold" fontSize="4xl" paddingBottom="5">
               VALUES
