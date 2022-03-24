@@ -26,20 +26,23 @@ const About = () => {
         p="10"
       >
         <Heading as="h1">GET STARTED.</Heading>
-        <Flex justify="center" align="center" flexDirection="column" p="10">
+        <Flex justify="center" align="center" flexDirection="column" p={{base: "5",sm:"10"}}>
           <InputGroup>
             <Input
               borderLeftRadius="3xl"
               borderColor="brand.300"
               bg="white"
+              fontFamily={"heading"}
+              fontSize={{base: "x-small",  sm:"sm"}}
               placeholder="EMAIL ADDRESS"
             />
             <InputRightAddon
               borderRightRadius="3xl"
               borderColor="brand.200"
               bg="brand.400"
+              fontFamily={'heading'}
+              fontSize={{base: "x-small",  sm:"sm"}}
               color="brand.300"
-              // children="GET IN TOUCH"
             >
               GET IN TOUCH
             </InputRightAddon>

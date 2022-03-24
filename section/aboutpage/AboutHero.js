@@ -15,9 +15,9 @@ import Image from "next/image";
 const AboutHero = (props) => {
   return (
     <Box>
-      <Stack minH="90vh" bg="brand.400" color="brand.300">
+      <Stack minH="90vh"  bgGradient={["linear( brand.400 ,  brand.600 )"]} color="brand.300">
         <Flex paddingTop="10" justify="center">
-          <Heading className="element" fontSize="5xl" fontWeight="bold" as="h1">
+          <Heading className="element" fontSize={{base: "2xl",md:"5xl"}} fontWeight="bold" as="h1" color={"brand.300"}>
             Who We Are
           </Heading>
         </Flex>
@@ -27,14 +27,14 @@ const AboutHero = (props) => {
           // justify="center"
           // divider={<StackDivider borderColor="gray.200" />}
         >
-          <Flex align="start" flexDirection="column" p="10">
+          <Flex align="start" flexDirection="column" p={{base: "5", sm: "10"}}>
             <Box position="relative">
               <Image src="/values.png" alt="Values" width="600" height="462" />
             </Box>
             <Text fontWeight="semibold" fontSize="4xl" paddingBottom="5">
-              Mission
+              MISSION
             </Text>
-            <Text fontSize="xl">
+            <Text fontSize="sm" >  
               We provide safety that doesn’t break the bank and doesn’t give you
               a headache. For so long in our business, general contractors,
               construction managers, and the like have put safety as a last
@@ -43,14 +43,14 @@ const AboutHero = (props) => {
             </Text>
           </Flex>
 
-          <Flex align="start" flexDirection="column" p="10">
+          <Flex align="start" flexDirection="column" p={{base: "5", sm: "10"}}>
             <Box position="relative">
               <Image src="/values.png" alt="Values" width="600" height="462" />
             </Box>
             <Text fontWeight="semibold" fontSize="4xl" paddingBottom="5">
               VALUES
             </Text>
-            <Text fontSize="xl">
+            <Text fontSize="md">
               We believe that safety can be affordable, can be fast, and can be
               easy. It’s that simple. Our industry has overcomplicated it.
               Because of that, we instill the values of simplicity, trust, and

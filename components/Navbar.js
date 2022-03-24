@@ -97,8 +97,9 @@ export default function WithSubnavigation() {
         color={useColorModeValue("gray.600", "white")}
         minH={"60px"}
         py={{ base: 5 }}
-        px={{ base: 4 }}
+        px={{ base: 8 }}
         align={"center"}
+        justify={"center"}
       >
         <Flex
           flex={{ base: 1, md: "auto" }}
@@ -114,13 +115,13 @@ export default function WithSubnavigation() {
             aria-label={"Toggle Navigation"}
           />
         </Flex>
-        <Flex flex={{ base: 1 }} justify={{ base: "center", md: "start" }}>
+        <Flex flex={{ base: 1 }} justify={{ base: "end", md: "start" }}>
           <NextLink href="/" passHref bg="brand.100">
             <Link
               className="box"
               textColor="white"
               fontWeight="bold"
-              px={{ base: "0", sm: "8" }}
+              px={{ base: "0"}}
               py="1"
             >
               <Image
@@ -132,7 +133,6 @@ export default function WithSubnavigation() {
             </Link>
           </NextLink>
         </Flex>
-
         <Stack
           flex={{ base: 1, xs: 1 }}
           justify={"flex-end"}
@@ -142,12 +142,15 @@ export default function WithSubnavigation() {
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav />
           </Flex>
-          <NextLink href="/" passHref>
+          <NextLink href="/" passHref >
             <Link
               className="box"
               textColor="white"
-              fontSize={{ base: "xx-small", sm: "sm" }}
+              fontSize={{ base: "xx-small", sm: "sm"}}
+              display={{base: "none", md: "block"}}
               bg="brand.200"
+              _hover={{ bg: 'brand.100' }}
+              fontFamily={"heading"}
               rounded="full"
               px={{ base: "2", sm: "8" }}
               py={{ base: "2", sm: "2" }}
@@ -171,7 +174,7 @@ const DesktopNav = () => {
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
 
   return (
-    <Stack direction={"row"} spacing={4} align="center">
+    <Stack direction={"row"} spacing={8} align="center">
       {NavItems.map((navItem) => (
         <Box key={navItem.label}>
           <Popover trigger={"hover"} placement={"bottom-start"}>
@@ -179,15 +182,16 @@ const DesktopNav = () => {
               <NextLink href={navItem.href ?? "#"} passHref>
                 <Link
                   p={2}
-                  fontSize={"sm"}
+                  fontSize={{md: "x-small", lg:"sm"}}
                   fontWeight={"bold"}
                   color={linkColor}
+                  fontFamily={"heading"}
                   _hover={{
                     textDecoration: "none",
                     color: linkHoverColor,
                   }}
                 >
-                  {navItem.label}
+                  {navItem.label} 
                 </Link>
               </NextLink>
             </PopoverTrigger>

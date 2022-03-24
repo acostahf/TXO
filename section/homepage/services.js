@@ -32,14 +32,15 @@ const Services = (props) => {
       bgSize="cover"
       bgRepeat="no-repeat"
       color="brand.300"
-      p={"10"}
+      p={{base: 5, sm: 5, md: 10, lg:10 }}
+      gap={"10"}
+     
     >
-      <Flex align="center" px={{ sm: 10, md: 20 }} minH="container.sm">
-        <SimpleGrid columns={{ base: 1, sm: 1, md: 2 }}>
+      <Flex align="center" px={{base:5, sm: 10, md: 20 }} minH="container.sm" >
+        <SimpleGrid columns={{ base: 1, sm: 1, md: 1, lg: 2  }}>
           <Box
-            // bgColor="gray.300"
             position="relative"
-            // height="499px"
+            pb={{ base: 5, sm: 5, md: 10, lg:0 }}
           >
             <Image
               src={servicesItems[0].src}
@@ -47,76 +48,37 @@ const Services = (props) => {
               layout="responsive"
               width="654"
               height="499"
+              priority
             />
-            {/* <Box
-              as="button"
-              px="4"
-              py="2"
-              bg="brand.300"
-              fontWeight="extrabold"
-              fontSize="2xl"
-              color="brand.400"
-              position="absolute"
-              top="-5"
-              left="-5"
-            >
-              CERTIFIED
-            </Box>
-            <Box
-              as="button"
-              px="4"
-              py="2"
-              bg="brand.300"
-              fontWeight="extrabold"
-              fontSize="2xl"
-              color="brand.400"
-              position="absolute"
-              top="32"
-              left="32"
-            >
-              EXPERIENCED
-            </Box>
-            <Box
-              as="button"
-              px="4"
-              py="2"
-              bg="brand.300"
-              fontWeight="extrabold"
-              fontSize="2xl"
-              color="brand.400"
-              position="absolute"
-              bottom="10"
-              left="-10"
-            >
-              TRUSTED
-            </Box> */}
           </Box>
           <TextBox title={servicesItems[0].title} des={servicesItems[0].des} />
         </SimpleGrid>
       </Flex>
-      <Flex align="center" px={{ sm: 10, md: 20 }} minH="container.sm">
-        <SimpleGrid columns={{ base: 1, sm: 1, md: 2 }}>
+      <Flex align="center" px={{base:5, sm: 10, md: 20 }} minH="container.sm" >
+        <SimpleGrid columns={{ base: 1, sm: 1, md: 1, lg: 2  }}>
           <TextBox title={servicesItems[1].title} des={servicesItems[1].des} />
-          <Box position="relative">
+          <Box position="relative"  pt={{base: 5, sm: 5, md: 10, lg:0 }}>
             <Image
               src={servicesItems[1].src}
               alt="header image"
               layout="responsive"
               width="654"
               height="499"
+              priority
             />
           </Box>
         </SimpleGrid>
       </Flex>
-      <Flex align="center" px={{ sm: 10, md: 20 }} minH="container.sm">
-        <SimpleGrid columns={{ base: 1, sm: 1, md: 2 }}>
-          <Box position="relative">
+      <Flex align="center" px={{base:5, sm: 10, md: 20 }} minH="container.sm">
+        <SimpleGrid columns={{ base: 1, sm: 1, md: 1, lg: 2 }}>
+          <Box position="relative"  pb={{base: 5, sm: 5, md: 10, lg:0 }}>
             <Image
               src={servicesItems[2].src}
               alt="header image"
               layout="responsive"
               width="654"
               height="499"
+              priority
             />
           </Box>
           <TextBox title={servicesItems[2].title} des={servicesItems[2].des} />

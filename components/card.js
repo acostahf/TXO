@@ -5,7 +5,7 @@ import { Box, Heading, Text, Flex } from "@chakra-ui/layout";
 const Card = (props) => {
   return (
     <Flex
-      bgGradient={["linear( brand.400 75%,  brand.200 )"]}
+      bgGradient={["linear( brand.400 ,  brand.600 )"]}
       color="brand.300"
       maxW="sm"
       h="100%"
@@ -23,9 +23,11 @@ const Card = (props) => {
         rounded="full"
         mb="2"
       >
-        <Image src={props.img} alt="header imager" layout="fill" priority />
+        <Flex justify={"center"} align={"center"} h="28" >
+        <Image src={props.img} alt="header imager" width={88} height={88} priority />
+        </Flex>
       </Box>
-      <Heading pt="10" pb="5" size={"xs"} mb="2">
+      <Heading pt="10" pb="5" size={"xs"} mb="2" fontFamily={"body"}>
         {props.title}
       </Heading>
       <Text lineHeight={"taller"} fontSize="sm" align="center">
