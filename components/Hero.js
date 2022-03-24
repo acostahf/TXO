@@ -12,6 +12,17 @@ import { Input, InputGroup, InputRightAddon } from "@chakra-ui/react";
 
 export const Hero = () => {
   return (
+<<<<<<< HEAD
+    <Box
+      bg="brand.200"
+      bgImage={"url('/mid-pattern.svg')"}
+      bgPosition="center"
+      bgSize="cover"
+      bgRepeat="no-repeat"
+      color="brand.300"
+    >
+      <SimpleGrid minH="80vh" columns={{ base: 1, sm: 1, md: 2 }}>
+=======
     <Box>
       <SimpleGrid
         minH="80vh"
@@ -23,6 +34,7 @@ export const Hero = () => {
         bgRepeat="no-repeat"
         color="brand.300"
       >
+>>>>>>> 06946352df94966302a6087a371a9f93f0648422
         <Flex justify="center" align="center" flexDirection="column" p="10">
           <Stack spacing={10}>
             <Box>
