@@ -20,7 +20,7 @@ const Footer = () => {
           gap="4"
           fontWeight="extrabold"
           fontFamily={"heading"}
-          fontSize={{base: "x-small", md:"sm"}}
+          fontSize={{ base: "x-small", md: "sm" }}
         >
           <NextLink href="/services" passHref>
             <Link className="box">SERVICES</Link>
@@ -43,7 +43,7 @@ const Footer = () => {
         <Divider />
         <Flex>
           <Text fontSize={"sm"}>
-            Copright 2023. TXO Consulting, LLC. All rights reserved.
+            Copright 2023. TXO Consulting, Inc. All rights reserved.
           </Text>
         </Flex>
       </VStack>
