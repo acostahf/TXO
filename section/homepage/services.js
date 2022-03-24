@@ -51,7 +51,10 @@ const Services = (props) => {
         </SimpleGrid>
       </Flex>
       <Flex align="center" px={{ base: 5, sm: 10, md: 20 }} minH="container.sm">
-        <SimpleGrid columns={{ base: 1, sm: 1, md: 1, lg: 2 }}>
+        <SimpleGrid
+          columns={{ base: 1, sm: 1, md: 1, lg: 2 }}
+          display={{ base: "none", sm: "block" }}
+        >
           <TextBox title={servicesItems[1].title} des={servicesItems[1].des} />
           <Box position="relative" pt={{ base: 5, sm: 5, md: 10, lg: 0 }}>
             <Image
@@ -63,6 +66,22 @@ const Services = (props) => {
               priority
             />
           </Box>
+        </SimpleGrid>
+        <SimpleGrid
+          columns={{ base: 1, sm: 1, md: 1, lg: 2 }}
+          display={{ base: "block", sm: "none" }}
+        >
+          <Box position="relative" pt={{ base: 5, sm: 5, md: 10, lg: 0 }}>
+            <Image
+              src={servicesItems[1].src}
+              alt="header image"
+              layout="responsive"
+              width="654"
+              height="499"
+              priority
+            />
+          </Box>
+          <TextBox title={servicesItems[1].title} des={servicesItems[1].des} />
         </SimpleGrid>
       </Flex>
       <Flex align="center" px={{ base: 5, sm: 10, md: 20 }} minH="container.sm">
