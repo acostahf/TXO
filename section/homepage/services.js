@@ -27,7 +27,7 @@ const Services = (props) => {
   return (
     <VStack
       bg="brand.400"
-      bgImage={"url('/mid-pattern.svg')"}
+      bgImage={"url('/mid-pattern.png')"}
       bgPosition="center"
       bgSize="cover"
       bgRepeat="no-repeat"
@@ -53,7 +53,7 @@ const Services = (props) => {
       <Flex align="center" px={{ base: 5, sm: 10, md: 20 }} minH="container.sm">
         <SimpleGrid
           columns={{ base: 1, sm: 1, md: 1, lg: 2 }}
-          display={{ base: "none", sm: "grid" }}
+          display={{ base: "none", md: "grid" }}
         >
           <TextBox title={servicesItems[1].title} des={servicesItems[1].des} />
           <Box position="relative" pt={{ base: 5, sm: 5, md: 10, lg: 0 }}>
@@ -69,7 +69,7 @@ const Services = (props) => {
         </SimpleGrid>
         <SimpleGrid
           columns={{ base: 1, sm: 1, md: 1, lg: 2 }}
-          display={{ base: "grid", sm: "none" }}
+          display={{ base: "grid", md: "none" }}
         >
           <Box position="relative" pt={{ base: 5, sm: 5, md: 10, lg: 0 }}>
             <Image
