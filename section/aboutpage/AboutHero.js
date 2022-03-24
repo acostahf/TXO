@@ -48,7 +48,7 @@ const AboutHero = (props) => {
             <Text fontWeight="semibold" fontSize="4xl" paddingBottom="5">
               MISSION
             </Text>
-            <Text fontSize="md">
+            <Text fontSize="md" lineHeight={"8"}>
               We provide safety that doesn’t break the bank and doesn’t give you
               a headache. For so long in our business, general contractors,
               construction managers, and the like have put safety as a last
@@ -73,7 +73,7 @@ const AboutHero = (props) => {
             <Text fontWeight="semibold" fontSize="4xl" paddingBottom="5">
               VALUES
             </Text>
-            <Text fontSize="md">
+            <Text fontSize="md" lineHeight={"8"}>
               We believe that safety can be affordable, can be fast, and can be
               easy. It’s that simple. Our industry has overcomplicated it.
               Because of that, we instill the values of simplicity, trust, and
