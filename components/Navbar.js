@@ -84,7 +84,7 @@ export default function WithSubnavigation() {
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav />
           </Flex>
-          <NextLink href="/" passHref>
+          <NextLink href="/contact" passHref>
             <Link
               className="box"
               textColor="white"

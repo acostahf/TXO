@@ -1,15 +1,8 @@
-import {
-  Box,
-  Flex,
-  Heading,
-  Wrap,
-  WrapItem,
-  Spacer,
-  VStack,
-} from "@chakra-ui/layout";
+import { Flex, Heading, Wrap, WrapItem, Spacer } from "@chakra-ui/layout";
 import { Button } from "@chakra-ui/react";
-import React, { useEffect } from "react";
+import React from "react";
 import Card from "../../components/card";
+import NextLink from "next/link";
 
 // data
 const cardItems = [
@@ -64,18 +57,20 @@ const Promises = (props) => {
           ))}
         </Wrap>
       </Flex>
-      <Button
-        borderRadius="full"
-        color="brand.300"
-        bg="brand.400"
-        fontFamily={"heading"}
-        px={"8"}
-        py={"6"}
-        fontSize={"sm"}
-        _hover={{ bg: "brand.100" }}
-      >
-        GET IN TOUCH
-      </Button>
+      <NextLink href="/contact" passHref>
+        <Button
+          borderRadius="full"
+          color="brand.300"
+          bg="brand.400"
+          fontFamily={"heading"}
+          px={"8"}
+          py={"6"}
+          fontSize={"sm"}
+          _hover={{ bg: "brand.100" }}
+        >
+          GET IN TOUCH
+        </Button>
+      </NextLink>
     </Flex>
   );
 };

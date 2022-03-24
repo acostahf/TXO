@@ -1,22 +1,14 @@
 import React from "react";
 import { Button, ButtonGroup } from "@chakra-ui/button";
 import {
-  Box,
   Flex,
-  GridItem,
   Heading,
   HStack,
   Text,
   Stack,
   StackDivider,
 } from "@chakra-ui/layout";
-
-// const items = [
-//  {
-//    title: "OSHA 10-hour",
-//  },
-
-// ];
+import NextLink from "next/link";
 
 const list = () => {
   return (
@@ -173,18 +165,20 @@ const list = () => {
           </Flex>
         </HStack>
         <ButtonGroup mt="20">
-          <Button
-            rounded="full"
-            px="10"
-            bgColor="brand.200"
-            _hover={{ bg: "brand.100" }}
-            color="white"
-            variant="solid"
-            fontFamily={"heading"}
-            fontSize={"sm"}
-          >
-            GET IN TOUCH
-          </Button>
+          <NextLink href="/contact" passHref>
+            <Button
+              rounded="full"
+              px="10"
+              bgColor="brand.200"
+              _hover={{ bg: "brand.100" }}
+              color="white"
+              variant="solid"
+              fontFamily={"heading"}
+              fontSize={"sm"}
+            >
+              GET IN TOUCH
+            </Button>
+          </NextLink>
         </ButtonGroup>
       </Stack>
     </box>
