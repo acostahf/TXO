@@ -92,8 +92,14 @@ const Carousel = () => {
   // });
 
   return (
-    <Flex py="10" px={{base: "5", sm: "0" }} align="center" direction="column" bg="brand.300">
-      <Heading fontSize="3xl" fontWeight="extrabold">
+    <Flex
+      py="10"
+      px={{ base: "5", sm: "0" }}
+      align="center"
+      direction="column"
+      bg="brand.300"
+    >
+      <Heading fontSize="3xl" fontWeight="extrabold" textAlign={"center"}>
         INDUSTRIES WE SERVICE
       </Heading>
       <Flex ref={sliderRef} className="keen-slider">

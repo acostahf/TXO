@@ -16,10 +16,16 @@ const Contact = () => {
       bgGradient={["linear( brand.400 ,  brand.600 )"]}
       color="brand.300"
       gap={"20"}
-      p={{base: "0" ,sm:"0", md: "20"}}
+      p={{ base: "0", sm: "0", md: "20" }}
     >
-      <Box justify="center" align="center" >
-        <Heading className="element" as="h1" fontWeight="bold" fontSize={{base: "2xl",md:"5xl"}} paddingBottom={"6"}>
+      <Box justify="center" align="center">
+        <Heading
+          className="element"
+          as="h1"
+          fontWeight="bold"
+          fontSize={{ base: "2xl", md: "5xl" }}
+          paddingBottom={"6"}
+        >
           WE ARE JUST A FEW CLICKS AWAY.
         </Heading>
         <Text fontWeight={"bold"}>Get In Contact With Us. We Don’t Bite.</Text>

@@ -14,12 +14,12 @@ import {
   InputRightAddon,
   Textarea,
   Button,
-  ButtonGroup
+  ButtonGroup,
 } from "@chakra-ui/react";
 
 const Join = () => {
   return (
-    <Box>
+    <Box display={{ base: "none", sm: "block" }}>
       <SimpleGrid
         minH={"40vh"}
         columns={{ base: 1, sm: 1, md: 3 }}
@@ -91,20 +91,20 @@ const Join = () => {
                 placeholder="Brief Message"
                 size="lg"
               />
-               <ButtonGroup >
-                  <Button
-                    rounded="full"
-                    px="6"
-                    bgColor="brand.400"
-                    _hover={{ bg: 'brand.100' }}
-                    color="white"
-                    variant="solid"
-                    fontFamily={"heading"}
-                    fontSize={"x-small"}
-                  >
-                     GET IN TOUCH
-                    </Button>
-                  </ButtonGroup>
+              <ButtonGroup>
+                <Button
+                  rounded="full"
+                  px="6"
+                  bgColor="brand.400"
+                  _hover={{ bg: "brand.100" }}
+                  color="white"
+                  variant="solid"
+                  fontFamily={"heading"}
+                  fontSize={"x-small"}
+                >
+                  GET IN TOUCH
+                </Button>
+              </ButtonGroup>
             </InputGroup>
           </Flex>
         </GridItem>

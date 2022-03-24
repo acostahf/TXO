@@ -9,7 +9,7 @@ import {
   Radio,
   Textarea,
   Button,
-  ButtonGroup
+  ButtonGroup,
 } from "@chakra-ui/react";
 import React from "react";
 
@@ -23,9 +23,8 @@ export const ContactForm = () => {
         bgSize="cover"
         bgRepeat="no-repeat"
         maxW={"6xl"}
-    
       >
-        <Flex p={{base: "5", sm:"10"}} bg={"brand.300"} >
+        <Flex p={{ base: "5", sm: "10" }} bg={"brand.300"}>
           <FormControl>
             <Flex direction={"column"} gap={"5"}>
               <FormLabel
@@ -34,18 +33,21 @@ export const ContactForm = () => {
                 fontFamily={"heading"}
                 fontSize="xl"
                 color="brand.400"
+                textAlign={{ base: "center", sm: "start" }}
               >
                 How May We Help You?
               </FormLabel>
               <RadioGroup defaultValue="Itachi" color="brand.300">
                 <HStack spacing="24px" color={"brand.400"}>
-                  <Radio   borderColor="brand.200" value="Quote">Quote</Radio>
-                  <Radio   borderColor="brand.200" value="Additional Information">
+                  <Radio borderColor="brand.200" value="Quote">
+                    Quote
+                  </Radio>
+                  <Radio borderColor="brand.200" value="Additional Information">
                     Additional Information
                   </Radio>
                 </HStack>
               </RadioGroup>
-              <Flex gap={"2"} direction={{base: "column", md: "row"}} >
+              <Flex gap={"2"} direction={{ base: "column", md: "row" }}>
                 <Input
                   borderRadius={"full"}
                   borderColor="brand.200"
@@ -63,7 +65,7 @@ export const ContactForm = () => {
                   placeholder="Last Name"
                 />
               </Flex>
-              <Flex gap={"2"} direction={{base: "column", md: "row"}} >
+              <Flex gap={"2"} direction={{ base: "column", md: "row" }}>
                 <Input
                   borderRadius={"full"}
                   borderColor="brand.200"
@@ -89,7 +91,7 @@ export const ContactForm = () => {
                 type="email"
                 placeholder="Email Address"
               />
-              <Flex gap={"2"} direction={{base: "column", md: "row"}} >
+              <Flex gap={"2"} direction={{ base: "column", md: "row" }}>
                 <Input
                   borderRadius={"full"}
                   borderColor="brand.200"
@@ -117,20 +119,20 @@ export const ContactForm = () => {
                 placeholder="message"
                 size="sm"
               />
-               <ButtonGroup >
-                  <Button
-                    rounded="full"
-                    px="6"
-                    bgColor="brand.200"
-                    _hover={{ bg: 'brand.100' }}
-                    color="white"
-                    variant="solid"
-                    fontFamily={"heading"}
-                    fontSize={"x-small"}
-                  >
-                     GET IN TOUCH
-                    </Button>
-                  </ButtonGroup>
+              <ButtonGroup>
+                <Button
+                  rounded="full"
+                  px="6"
+                  bgColor="brand.200"
+                  _hover={{ bg: "brand.100" }}
+                  color="white"
+                  variant="solid"
+                  fontFamily={"heading"}
+                  fontSize={"x-small"}
+                >
+                  GET IN TOUCH
+                </Button>
+              </ButtonGroup>
             </Flex>
           </FormControl>
         </Flex>

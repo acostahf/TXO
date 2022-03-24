@@ -43,7 +43,7 @@ const Promises = (props) => {
       p="10"
       spacing="10"
     >
-      <Heading className="title" mb="20" fontSize={"3xl"}>
+      <Heading className="title" mb="20" fontSize={"3xl"} textAlign={"center"}>
         The TXO PROMISE
       </Heading>
       <Flex align="center" justify="center">
@@ -64,7 +64,16 @@ const Promises = (props) => {
           ))}
         </Wrap>
       </Flex>
-      <Button borderRadius="full" color="brand.300" bg="brand.400" fontFamily={"heading"} px={"8"} py={"6"} fontSize={"sm"}  _hover={{ bg: 'brand.100' }}>
+      <Button
+        borderRadius="full"
+        color="brand.300"
+        bg="brand.400"
+        fontFamily={"heading"}
+        px={"8"}
+        py={"6"}
+        fontSize={"sm"}
+        _hover={{ bg: "brand.100" }}
+      >
         GET IN TOUCH
       </Button>
     </Flex>

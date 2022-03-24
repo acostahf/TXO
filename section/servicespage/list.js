@@ -26,11 +26,13 @@ const list = () => {
         direction="column"
         bg="brand.400"
         color="brand.300"
-        p={{base: "5", sm: "20"}}
+        p={{ base: "5", sm: "20" }}
         spacing="10"
         justify={"center"}
       >
-        <Heading textAlign={"center"} >SAFETY TRAINING</Heading>
+        <Heading display={{ base: "none", sm: "block" }} textAlign={"center"}>
+          SAFETY TRAINING
+        </Heading>
         <Text textAlign={"center"} fontSize={"sm"}>
           Providing your employees with the necessary and relevant safety
           training is key in preventing potential incidents, creating a safe
@@ -46,7 +48,12 @@ const list = () => {
           gap="3"
           divider={<StackDivider borderColor="brand.200" w="" />}
         >
-          <Flex flexDirection="column" alignItems={{base: "center" ,sm:"end"}} gap={"2"} textAlign="center">
+          <Flex
+            flexDirection="column"
+            alignItems={{ base: "center", sm: "end" }}
+            gap={"2"}
+            textAlign="center"
+          >
             <Text
               fontWeight="semibold"
               fontSize={{ base: "sm", sm: "lg", lg: "2xl" }}
@@ -109,7 +116,12 @@ const list = () => {
             </Text>
           </Flex>
 
-          <Flex flexDirection="column" gap={"2"}  alignItems={{base: "center" ,sm:"start"}} textAlign={{base: "center", md: "start" }}>
+          <Flex
+            flexDirection="column"
+            gap={"2"}
+            alignItems={{ base: "center", sm: "start" }}
+            textAlign={{ base: "center", md: "start" }}
+          >
             <Text
               fontWeight="semibold"
               fontSize={{ base: "sm", sm: "lg", lg: "2xl" }}
@@ -177,7 +189,7 @@ const list = () => {
             rounded="full"
             px="10"
             bgColor="brand.200"
-            _hover={{ bg: 'brand.100' }}
+            _hover={{ bg: "brand.100" }}
             color="white"
             variant="solid"
             fontFamily={"heading"}

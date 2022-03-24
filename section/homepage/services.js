@@ -32,16 +32,12 @@ const Services = (props) => {
       bgSize="cover"
       bgRepeat="no-repeat"
       color="brand.300"
-      p={{base: 5, sm: 5, md: 10, lg:10 }}
-      gap={"10"}
-     
+      p={{ base: 5, sm: 5, md: 10, lg: 10 }}
+      gap={{ base: "0", sm: "10" }}
     >
-      <Flex align="center" px={{base:5, sm: 10, md: 20 }} minH="container.sm" >
-        <SimpleGrid columns={{ base: 1, sm: 1, md: 1, lg: 2  }}>
-          <Box
-            position="relative"
-            pb={{ base: 5, sm: 5, md: 10, lg:0 }}
-          >
+      <Flex align="center" px={{ base: 5, sm: 10, md: 20 }} minH="container.sm">
+        <SimpleGrid columns={{ base: 1, sm: 1, md: 1, lg: 2 }}>
+          <Box position="relative" pb={{ base: 5, sm: 5, md: 10, lg: 0 }}>
             <Image
               src={servicesItems[0].src}
               alt="header image"
@@ -54,10 +50,10 @@ const Services = (props) => {
           <TextBox title={servicesItems[0].title} des={servicesItems[0].des} />
         </SimpleGrid>
       </Flex>
-      <Flex align="center" px={{base:5, sm: 10, md: 20 }} minH="container.sm" >
-        <SimpleGrid columns={{ base: 1, sm: 1, md: 1, lg: 2  }}>
+      <Flex align="center" px={{ base: 5, sm: 10, md: 20 }} minH="container.sm">
+        <SimpleGrid columns={{ base: 1, sm: 1, md: 1, lg: 2 }}>
           <TextBox title={servicesItems[1].title} des={servicesItems[1].des} />
-          <Box position="relative"  pt={{base: 5, sm: 5, md: 10, lg:0 }}>
+          <Box position="relative" pt={{ base: 5, sm: 5, md: 10, lg: 0 }}>
             <Image
               src={servicesItems[1].src}
               alt="header image"
@@ -69,9 +65,9 @@ const Services = (props) => {
           </Box>
         </SimpleGrid>
       </Flex>
-      <Flex align="center" px={{base:5, sm: 10, md: 20 }} minH="container.sm">
+      <Flex align="center" px={{ base: 5, sm: 10, md: 20 }} minH="container.sm">
         <SimpleGrid columns={{ base: 1, sm: 1, md: 1, lg: 2 }}>
-          <Box position="relative"  pb={{base: 5, sm: 5, md: 10, lg:0 }}>
+          <Box position="relative" pb={{ base: 5, sm: 5, md: 10, lg: 0 }}>
             <Image
               src={servicesItems[2].src}
               alt="header image"
