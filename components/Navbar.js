@@ -1,74 +1,10 @@
-// import React, { useEffect } from "react";
 import NextLink from "next/link";
 import Image from "next/image";
-// import { Box, Flex, Text, Button, Link } from "@chakra-ui/react";
-// import gsap from "gsap";
-// import theme from "../theme";
-
-// const Navbar = () => {
-//   // useEffect(() => {
-//   //   // const navTl = gsap.timeline();
-//   //   gsap.from(".box", { duration: 1.5, y: -300, stagger: 0.2 });
-//   // }, []);
-
-//   return (
-//     <Box bg="brand.400">
-//       <Flex
-//         w="100%"
-//         justify="space-between"
-//         align="center"
-//         p="6"
-//         px="12"
-//         boxShadow="lg"
-//       >
-//         <NextLink href="/" passHref bg="brand.100">
-//           <Link
-//             className="box"
-//             textColor="white"
-//             fontWeight="bold"
-//             px="8"
-//             py="1"
-//           >
-//             <Image src="/nav-logo.png" width="125" height="54" alt="TXO Logo" />
-//           </Link>
-//         </NextLink>
-//         <Flex color="brand.300" justify="space-evenly" align="center" gap="4">
-//           <NextLink href="/services" passHref>
-//             <Link className="box">Safety Services</Link>
-//           </NextLink>
-//           <NextLink href="/about" passHref>
-//             <Link className="box">Who We Are</Link>
-//           </NextLink>
-//           <NextLink href="/contact" passHref>
-//             <Link className="box">Contact</Link>
-//           </NextLink>
-//           <NextLink href="/" passHref>
-//             <Link
-//               className="box"
-//               textColor="white"
-//               fontWeight="bold"
-//               bg="brand.200"
-//               rounded="full"
-//               px="8"
-//               py="1"
-//             >
-//               GET IN TOUCH
-//             </Link>
-//           </NextLink>
-//         </Flex>
-//       </Flex>
-//     </Box>
-//   );
-// };
-
-// export default Navbar;
-
 import {
   Box,
   Flex,
   Text,
   IconButton,
-  Button,
   Stack,
   Collapse,
   Icon,
@@ -77,7 +13,6 @@ import {
   PopoverTrigger,
   PopoverContent,
   useColorModeValue,
-  useBreakpointValue,
   useDisclosure,
 } from "@chakra-ui/react";
 import {
@@ -99,7 +34,7 @@ export default function WithSubnavigation() {
         py={{ base: 5 }}
         px={{ base: 8 }}
         align={"center"}
-        justify={"center"}
+        justify={{ base: "space-between", sm: "center" }}
       >
         <Flex
           flex={{ base: 1, md: "auto" }}
@@ -121,7 +56,7 @@ export default function WithSubnavigation() {
               className="box"
               textColor="white"
               fontWeight="bold"
-              px={{ base: "0"}}
+              px={{ base: "0" }}
               py="1"
             >
               <Image
@@ -142,14 +77,14 @@ export default function WithSubnavigation() {
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav />
           </Flex>
-          <NextLink href="/" passHref >
+          <NextLink href="/" passHref>
             <Link
               className="box"
               textColor="white"
-              fontSize={{ base: "xx-small", sm: "sm"}}
-              display={{base: "none", md: "block"}}
+              fontSize={{ base: "xx-small", sm: "sm" }}
+              display={{ base: "none", md: "block" }}
               bg="brand.200"
-              _hover={{ bg: 'brand.100' }}
+              _hover={{ bg: "brand.100" }}
               fontFamily={"heading"}
               rounded="full"
               px={{ base: "2", sm: "8" }}
@@ -182,7 +117,7 @@ const DesktopNav = () => {
               <NextLink href={navItem.href ?? "#"} passHref>
                 <Link
                   p={2}
-                  fontSize={{md: "x-small", lg:"sm"}}
+                  fontSize={{ md: "x-small", lg: "sm" }}
                   fontWeight={"bold"}
                   color={linkColor}
                   fontFamily={"heading"}
@@ -191,7 +126,7 @@ const DesktopNav = () => {
                     color: linkHoverColor,
                   }}
                 >
-                  {navItem.label} 
+                  {navItem.label}
                 </Link>
               </NextLink>
             </PopoverTrigger>

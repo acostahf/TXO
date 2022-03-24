@@ -64,7 +64,7 @@ const list = () => {
               fontWeight="semibold"
               fontSize={{ base: "sm", sm: "lg", lg: "2xl" }}
             >
-              Bloodborne Pathogens
+              Confined Space Entry
             </Text>
             <Text
               fontWeight="semibold"
@@ -88,7 +88,7 @@ const list = () => {
               fontWeight="semibold"
               fontSize={{ base: "sm", sm: "lg", lg: "2xl" }}
             >
-              Ergonomics Awareness
+              First Aid
             </Text>
             <Text
               fontWeight="semibold"
@@ -107,12 +107,6 @@ const list = () => {
               fontSize={{ base: "sm", sm: "lg", lg: "2xl" }}
             >
               Hazard Communication
-            </Text>
-            <Text
-              fontWeight="semibold"
-              fontSize={{ base: "sm", sm: "lg", lg: "2xl" }}
-            >
-              Hearing Protection
             </Text>
           </Flex>
 
@@ -126,61 +120,55 @@ const list = () => {
               fontWeight="semibold"
               fontSize={{ base: "sm", sm: "lg", lg: "2xl" }}
             >
-              OSHA 10-hour
+              OSHA 30-hour
             </Text>
             <Text
               fontWeight="semibold"
               fontSize={{ base: "sm", sm: "lg", lg: "2xl" }}
             >
-              Bloodborne Pathogens
+              Site specific Onboarding
             </Text>
             <Text
               fontWeight="semibold"
               fontSize={{ base: "sm", sm: "lg", lg: "2xl" }}
             >
-              Crane Safety
+              Complex Lockout/Tagout
             </Text>
             <Text
               fontWeight="semibold"
               fontSize={{ base: "sm", sm: "lg", lg: "2xl" }}
             >
-              Electrical Safety
+              Machine Guarding
             </Text>
             <Text
               fontWeight="semibold"
               fontSize={{ base: "sm", sm: "lg", lg: "2xl" }}
             >
-              Emergency Response Planning
+              Personal Protective Equipment
             </Text>
             <Text
               fontWeight="semibold"
               fontSize={{ base: "sm", sm: "lg", lg: "2xl" }}
             >
-              Ergonomics Awareness
+              CPR Training
             </Text>
             <Text
               fontWeight="semibold"
               fontSize={{ base: "sm", sm: "lg", lg: "2xl" }}
             >
-              Fall Protection
+              Respiratory Protection
             </Text>
             <Text
               fontWeight="semibold"
               fontSize={{ base: "sm", sm: "lg", lg: "2xl" }}
             >
-              Forklift/Powered Industrial Vehicle
+              Scaffolding
             </Text>
             <Text
               fontWeight="semibold"
               fontSize={{ base: "sm", sm: "lg", lg: "2xl" }}
             >
-              Hazard Communication
-            </Text>
-            <Text
-              fontWeight="semibold"
-              fontSize={{ base: "sm", sm: "lg", lg: "2xl" }}
-            >
-              Hearing Protection
+              Trenching and Excavation
             </Text>
           </Flex>
         </HStack>
