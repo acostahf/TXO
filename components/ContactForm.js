@@ -11,9 +11,125 @@ import {
   Button,
   ButtonGroup,
 } from "@chakra-ui/react";
-import React from "react";
-
+import React, { useState } from "react";
 export const ContactForm = () => {
+  // States for contact form fields
+  const [firstname, setFirstname] = useState("");
+  const [lastname, setLastname] = useState("");
+  const [company, setCompany] = useState("");
+  const [number, setNumber] = useState("");
+  const [service, setService] = useState("");
+  const [reference, setReference] = useState("");
+  const [email, setEmail] = useState("");
+  const [quote, setQuote] = useState("");
+  const [info, setInfo] = useState("");
+  // const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
+  //   Form validation stateds
+  const [errors, setErrors] = useState({});
+
+  //   Setting button text on form submission
+  const [buttonText, setButtonText] = useState("Send");
+
+  // Setting success or failure messages states
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const [showFailureMessage, setShowFailureMessage] = useState(false);
+
+  // Validation check method
+  const handleValidation = () => {
+    let tempErrors = {};
+    let isValid = true;
+
+    if (quote.length <= 0) {
+      tempErrors["quote"] = true;
+      isValid = false;
+    }
+    if (info.length <= 0) {
+      tempErrors["info"] = true;
+      isValid = false;
+    }
+    if (firstname.length <= 0) {
+      tempErrors["firstname"] = true;
+      isValid = false;
+    }
+    if (lastname.length <= 0) {
+      tempErrors["lastname"] = true;
+      isValid = false;
+    }
+    if (company.length <= 0) {
+      tempErrors["company"] = true;
+      isValid = false;
+    }
+    if (number.length <= 0) {
+      tempErrors["number"] = true;
+      isValid = false;
+    }
+    if (service.length <= 0) {
+      tempErrors["service"] = true;
+      isValid = false;
+    }
+    if (reference.length <= 0) {
+      tempErrors["reference"] = true;
+      isValid = false;
+    }
+    if (email.length <= 0) {
+      tempErrors["email"] = true;
+      isValid = false;
+    }
+    if (message.length <= 0) {
+      tempErrors["message"] = true;
+      isValid = false;
+    }
+
+    setErrors({ ...tempErrors });
+    console.log("errors", errors);
+    return isValid;
+  };
+
+  //   Handling form submit
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    let isValidForm = handleValidation();
+
+    if (isValidForm) {
+      setButtonText("Sending");
+      const res = await fetch("/api/sendgrid", {
+        body: JSON.stringify({
+          quote: quote,
+          info: info,
+          email: email,
+          fullname: fullname,
+          lastname: lastname,
+          company: company,
+          number: number,
+          service: service,
+          reference: reference,
+          message: message,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+      });
+
+      const { error } = await res.json();
+      if (error) {
+        console.log(error);
+        setShowSuccessMessage(false);
+        setShowFailureMessage(true);
+        setButtonText("Send");
+        return;
+      }
+      setShowSuccessMessage(true);
+      setShowFailureMessage(false);
+      setButtonText("Send");
+    }
+    // console.log(fullname, email, subject, message);
+  };
+
   return (
     <div>
       <Flex
@@ -25,7 +141,7 @@ export const ContactForm = () => {
         maxW={"6xl"}
       >
         <Flex p={{ base: "5", sm: "10" }} bg={"brand.300"}>
-          <FormControl>
+          <FormControl onSubmit={handleSubmit}>
             <Flex direction={"column"} gap={"5"}>
               <FormLabel
                 htmlFor="email"
@@ -49,78 +165,166 @@ export const ContactForm = () => {
               </RadioGroup>
               <Flex gap={"2"} direction={{ base: "column", md: "row" }}>
                 <Input
+                  type="text"
+                  value={firstname}
+                  onChange={(e) => {
+                    // setSubject(e.target.value);
+                    setFirstname(e.target.value);
+                  }}
                   borderRadius={"full"}
                   borderColor="brand.200"
                   borderWidth={"2px"}
                   id="first"
-                  type="first"
                   placeholder="Frist Name"
+                  color={"brand.200"}
                 />
+                {errors?.message && (
+                  <p className="text-red-500 bg-nmr-black rounded-lg px-2">
+                    Message body cannot be empty.
+                  </p>
+                )}
                 <Input
+                  type="text"
+                  value={lastname}
+                  onChange={(e) => {
+                    // setSubject(e.target.value);
+                    setLastname(e.target.value);
+                  }}
+                  color={"brand.200"}
                   borderRadius={"full"}
                   borderColor="brand.200"
                   borderWidth={"2px"}
                   id="last"
-                  type="last"
                   placeholder="Last Name"
                 />
+                {errors?.message && (
+                  <p className="text-red-500 bg-nmr-black rounded-lg px-2">
+                    Message body cannot be empty.
+                  </p>
+                )}
               </Flex>
               <Flex gap={"2"} direction={{ base: "column", md: "row" }}>
                 <Input
+                  type="text"
+                  value={company}
+                  onChange={(e) => {
+                    // setSubject(e.target.value);
+                    setCompany(e.target.value);
+                  }}
+                  color={"brand.200"}
                   borderRadius={"full"}
                   borderColor="brand.200"
                   borderWidth={"2px"}
                   id="company"
-                  type="company"
                   placeholder="Company Name"
                 />
+                {errors?.message && (
+                  <p className="text-red-500 bg-nmr-black rounded-lg px-2">
+                    Message body cannot be empty.
+                  </p>
+                )}
                 <Input
+                  type="text"
+                  value={number}
+                  onChange={(e) => {
+                    // setSubject(e.target.value);
+                    setNumber(e.target.value);
+                  }}
+                  color={"brand.200"}
                   borderRadius={"full"}
                   borderColor="brand.200"
                   borderWidth={"2px"}
                   id="number"
-                  type="number"
                   placeholder="Phone Number"
                 />
+                {errors?.message && (
+                  <p className="text-red-500 bg-nmr-black rounded-lg px-2">
+                    Message body cannot be empty.
+                  </p>
+                )}
               </Flex>
               <Input
+                type="email"
+                value={email}
+                onChange={(e) => {
+                  // setSubject(e.target.value);
+                  setEmail(e.target.value);
+                }}
+                color={"brand.200"}
                 borderRadius={"full"}
                 borderColor="brand.200"
                 borderWidth={"2px"}
                 id="email"
-                type="email"
                 placeholder="Email Address"
               />
+              {errors?.message && (
+                <p className="text-red-500 bg-nmr-black rounded-lg px-2">
+                  Message body cannot be empty.
+                </p>
+              )}
               <Flex gap={"2"} direction={{ base: "column", md: "row" }}>
                 <Input
+                  type="text"
+                  value={service}
+                  onChange={(e) => {
+                    // setSubject(e.target.value);
+                    setService(e.target.value);
+                  }}
+                  color={"brand.200"}
                   borderRadius={"full"}
                   borderColor="brand.200"
                   borderWidth={"2px"}
                   id="service"
-                  type="service"
                   placeholder="Service Requesting"
                 />
-
+                {errors?.message && (
+                  <p className="text-red-500 bg-nmr-black rounded-lg px-2">
+                    Message body cannot be empty.
+                  </p>
+                )}
                 <Input
+                  type="text"
+                  value={reference}
+                  onChange={(e) => {
+                    // setSubject(e.target.value);
+                    setReference(e.target.value);
+                  }}
+                  color={"brand.200"}
                   borderRadius={"full"}
                   borderColor="brand.200"
                   borderWidth={"2px"}
                   id="reference"
-                  type="reference"
                   placeholder="How did you find us"
                 />
+                {errors?.message && (
+                  <p className="text-red-500 bg-nmr-black rounded-lg px-2">
+                    Message body cannot be empty.
+                  </p>
+                )}
               </Flex>
               <Textarea
+                type="text"
+                value={message}
+                onChange={(e) => {
+                  // setSubject(e.target.value);
+                  setMessage(e.target.value);
+                }}
+                color={"brand.200"}
                 borderRadius={"xl"}
                 borderColor="brand.200"
                 borderWidth={"2px"}
                 id="message"
-                type="message"
                 placeholder="message"
                 size="sm"
               />
+              {errors?.message && (
+                <p className="text-red-500 bg-nmr-black rounded-lg px-2">
+                  Message body cannot be empty.
+                </p>
+              )}
               <ButtonGroup>
                 <Button
+                  type="submit"
                   rounded="full"
                   px="6"
                   bgColor="brand.200"
