@@ -137,7 +137,9 @@ export const ContactForm = () => {
 			number,
 			service,
 			reference,
-			message
+			message,
+			quote,
+			info
 		);
 	};
 
@@ -152,8 +154,8 @@ export const ContactForm = () => {
 				maxW={"6xl"}
 			>
 				<Flex p={{ base: "5", sm: "10" }} bg={"brand.300"}>
-					<form>
-						<FormControl onSubmit={handleSubmit}>
+					<form onSubmit={handleSubmit}>
+						<FormControl>
 							<Flex direction={"column"} gap={"5"}>
 								<FormLabel
 									htmlFor="email"
@@ -180,7 +182,7 @@ export const ContactForm = () => {
 											borderColor="brand.200"
 											value="Additional Information"
 											onChange={(e) => {
-												setInfo(e.target.value);
+												setQuote(e.target.value);
 											}}
 										>
 											Additional Information
