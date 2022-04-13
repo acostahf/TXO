@@ -12,6 +12,7 @@ import {
 	Button,
 	ButtonGroup,
 	FormErrorMessage,
+	Text,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 export const ContactForm = () => {
@@ -23,7 +24,6 @@ export const ContactForm = () => {
 	const [service, setService] = useState("");
 	const [reference, setReference] = useState("");
 	const [email, setEmail] = useState("");
-	const [quote, setQuote] = useState("");
 	const [info, setInfo] = useState("");
 	// const [subject, setSubject] = useState("");
 	const [message, setMessage] = useState("");
@@ -43,10 +43,6 @@ export const ContactForm = () => {
 		let tempErrors = {};
 		let isValid = true;
 
-		if (quote.length <= 0) {
-			tempErrors["quote"] = true;
-			isValid = false;
-		}
 		if (info.length <= 0) {
 			tempErrors["info"] = true;
 			isValid = false;
@@ -100,10 +96,9 @@ export const ContactForm = () => {
 			setButtonText("Sending");
 			const res = await fetch("/api/sendgrid", {
 				body: JSON.stringify({
-					quote: quote,
 					info: info,
 					email: email,
-					fullname: fullname,
+					firstname: firstname,
 					lastname: lastname,
 					company: company,
 					number: number,
@@ -138,7 +133,6 @@ export const ContactForm = () => {
 			service,
 			reference,
 			message,
-			quote,
 			info
 		);
 	};
@@ -155,213 +149,221 @@ export const ContactForm = () => {
 			>
 				<Flex p={{ base: "5", sm: "10" }} bg={"brand.300"}>
 					<form onSubmit={handleSubmit}>
-						<FormControl>
-							<Flex direction={"column"} gap={"5"}>
-								<FormLabel
-									htmlFor="email"
-									fontWeight="bold"
-									fontFamily={"heading"}
-									fontSize="xl"
-									color="brand.400"
-									textAlign={{ base: "center", sm: "start" }}
-								>
-									How May We Help You?
-								</FormLabel>
-								<RadioGroup defaultValue="Itachi" color="brand.300">
-									<HStack spacing="24px" color={"brand.400"}>
-										<Radio
-											borderColor="brand.200"
-											value="Quote"
-											onChange={(e) => {
-												setQuote(e.target.value);
-											}}
-										>
-											Quote
-										</Radio>
-										<Radio
-											borderColor="brand.200"
-											value="Additional Information"
-											onChange={(e) => {
-												setQuote(e.target.value);
-											}}
-										>
-											Additional Information
-										</Radio>
-									</HStack>
-								</RadioGroup>
-								<Flex gap={"2"} direction={{ base: "column", md: "row" }}>
-									<Input
-										type="text"
-										value={firstname}
-										name="firstname"
-										onChange={(e) => {
-											// setSubject(e.target.value);
-											setFirstname(e.target.value);
-										}}
-										borderRadius={"full"}
+						<Flex direction={"column"} gap={"5"}>
+							<div className="text-left pl-3">
+								{showSuccessMessage && (
+									<Alert status="success" color={"black"}>
+										Thankyou! Your Message has been delivered.{" "}
+									</Alert>
+								)}
+								{showFailureMessage && (
+									<Alert status="error" color={"black"}>
+										Oops! Something went wrong, please try again.{" "}
+									</Alert>
+								)}
+							</div>
+							<div>
+								{errors?.info && (
+									<Text> Quote or Reference cannot be empty.</Text>
+								)}
+								{errors?.firstname && (
+									<Text color={"red.500"}>Firstname cannot be empty.</Text>
+								)}
+								{errors?.lastname && (
+									<Text color={"red.500"}>Lastname cannot be empty.</Text>
+								)}
+								{errors?.company && (
+									<Text color={"red.500"}>Company cannot be empty.</Text>
+								)}
+								{errors?.number && (
+									<Text color={"red.500"}>Number cannot be empty.</Text>
+								)}
+								{errors?.email && (
+									<Text color={"red.500"}> Email cannot be empty.</Text>
+								)}
+								{errors?.service && (
+									<Text color={"red.500"}>Service cannot be empty.</Text>
+								)}
+								{errors?.reference && (
+									<Text color={"red.500"}>Reference cannot be empty.</Text>
+								)}
+								{errors?.message && (
+									<Text color={"red.500"}>Message cannot be empty.</Text>
+								)}
+							</div>
+							<FormLabel
+								htmlFor="email"
+								fontWeight="bold"
+								fontFamily={"heading"}
+								fontSize="xl"
+								color="brand.400"
+								textAlign={{ base: "center", sm: "start" }}
+							>
+								How May We Help You?
+							</FormLabel>
+							<RadioGroup defaultValue="info" color="brand.300">
+								<HStack spacing="24px" color={"brand.400"}>
+									<Radio
 										borderColor="brand.200"
-										borderWidth={"2px"}
-										id="first"
-										placeholder="Frist Name"
-										color={"brand.200"}
-									/>
-									{errors?.message && (
-										<FormErrorMessage>Input cannot be empty.</FormErrorMessage>
-									)}
-									<Input
-										type="text"
-										value={lastname}
+										value="Quote"
 										onChange={(e) => {
-											// setSubject(e.target.value);
-											setLastname(e.target.value);
+											setInfo(e.target.value);
 										}}
-										color={"brand.200"}
-										borderRadius={"full"}
+									>
+										Quote
+									</Radio>
+									<Radio
 										borderColor="brand.200"
-										borderWidth={"2px"}
-										id="last"
-										placeholder="Last Name"
-									/>
-									{errors?.message && (
-										<FormErrorMessage>Input cannot be empty.</FormErrorMessage>
-									)}
-								</Flex>
-								<Flex gap={"2"} direction={{ base: "column", md: "row" }}>
-									<Input
-										type="text"
-										value={company}
+										value="Additional Information"
 										onChange={(e) => {
-											// setSubject(e.target.value);
-											setCompany(e.target.value);
+											setInfo(e.target.value);
 										}}
-										color={"brand.200"}
-										borderRadius={"full"}
-										borderColor="brand.200"
-										borderWidth={"2px"}
-										id="company"
-										placeholder="Company Name"
-									/>
-									{errors?.message && (
-										<FormErrorMessage>Input cannot be empty.</FormErrorMessage>
-									)}
-									<Input
-										type="text"
-										value={number}
-										onChange={(e) => {
-											// setSubject(e.target.value);
-											setNumber(e.target.value);
-										}}
-										color={"brand.200"}
-										borderRadius={"full"}
-										borderColor="brand.200"
-										borderWidth={"2px"}
-										id="number"
-										placeholder="Phone Number"
-									/>
-									{errors?.message && (
-										<FormErrorMessage>Input cannot be empty.</FormErrorMessage>
-									)}
-								</Flex>
+									>
+										Additional Information
+									</Radio>
+								</HStack>
+							</RadioGroup>
+							<Flex gap={"2"} direction={{ base: "column", md: "row" }}>
 								<Input
-									type="email"
-									value={email}
+									type="text"
+									value={firstname}
+									name="firstname"
 									onChange={(e) => {
 										// setSubject(e.target.value);
-										setEmail(e.target.value);
+										setFirstname(e.target.value);
+									}}
+									borderRadius={"full"}
+									borderColor="brand.200"
+									borderWidth={"2px"}
+									id="first"
+									placeholder="Frist Name"
+									color={"brand.200"}
+								/>
+
+								<Input
+									type="text"
+									value={lastname}
+									onChange={(e) => {
+										// setSubject(e.target.value);
+										setLastname(e.target.value);
 									}}
 									color={"brand.200"}
 									borderRadius={"full"}
 									borderColor="brand.200"
 									borderWidth={"2px"}
-									id="email"
-									placeholder="Email Address"
+									id="last"
+									placeholder="Last Name"
 								/>
-								{errors?.message && (
-									<FormErrorMessage>Input cannot be empty.</FormErrorMessage>
-								)}
-								<Flex gap={"2"} direction={{ base: "column", md: "row" }}>
-									<Input
-										type="text"
-										value={service}
-										onChange={(e) => {
-											// setSubject(e.target.value);
-											setService(e.target.value);
-										}}
-										color={"brand.200"}
-										borderRadius={"full"}
-										borderColor="brand.200"
-										borderWidth={"2px"}
-										id="service"
-										placeholder="Service Requesting"
-									/>
-									{errors?.message && (
-										<FormErrorMessage>Input cannot be empty.</FormErrorMessage>
-									)}
-									<Input
-										type="text"
-										value={reference}
-										onChange={(e) => {
-											// setSubject(e.target.value);
-											setReference(e.target.value);
-										}}
-										color={"brand.200"}
-										borderRadius={"full"}
-										borderColor="brand.200"
-										borderWidth={"2px"}
-										id="reference"
-										placeholder="How did you find us"
-									/>
-									{errors?.message && (
-										<FormErrorMessage>Input cannot be empty.</FormErrorMessage>
-									)}
-								</Flex>
-								<Textarea
+							</Flex>
+							<Flex gap={"2"} direction={{ base: "column", md: "row" }}>
+								<Input
 									type="text"
-									value={message}
+									value={company}
 									onChange={(e) => {
-										setMessage(e.target.value);
+										// setSubject(e.target.value);
+										setCompany(e.target.value);
 									}}
 									color={"brand.200"}
-									borderRadius={"xl"}
+									borderRadius={"full"}
 									borderColor="brand.200"
 									borderWidth={"2px"}
-									id="message"
-									placeholder="message"
-									size="sm"
+									id="company"
+									placeholder="Company Name"
 								/>
-								{errors?.message && (
-									<FormErrorMessage>Input cannot be empty.</FormErrorMessage>
-								)}
-								<ButtonGroup>
-									<Button
-										type="submit"
-										rounded="full"
-										px="6"
-										bgColor="brand.200"
-										_hover={{ bg: "brand.100" }}
-										color="white"
-										variant="solid"
-										fontFamily={"heading"}
-										fontSize={"x-small"}
-									>
-										GET IN TOUCH
-									</Button>
-								</ButtonGroup>
+
+								<Input
+									type="text"
+									value={number}
+									onChange={(e) => {
+										// setSubject(e.target.value);
+										setNumber(e.target.value);
+									}}
+									color={"brand.200"}
+									borderRadius={"full"}
+									borderColor="brand.200"
+									borderWidth={"2px"}
+									id="number"
+									placeholder="Phone Number"
+								/>
 							</Flex>
-						</FormControl>
+							<Input
+								type="email"
+								value={email}
+								onChange={(e) => {
+									// setSubject(e.target.value);
+									setEmail(e.target.value);
+								}}
+								color={"brand.200"}
+								borderRadius={"full"}
+								borderColor="brand.200"
+								borderWidth={"2px"}
+								id="email"
+								placeholder="Email Address"
+							/>
+
+							<Flex gap={"2"} direction={{ base: "column", md: "row" }}>
+								<Input
+									type="text"
+									value={service}
+									onChange={(e) => {
+										// setSubject(e.target.value);
+										setService(e.target.value);
+									}}
+									color={"brand.200"}
+									borderRadius={"full"}
+									borderColor="brand.200"
+									borderWidth={"2px"}
+									id="service"
+									placeholder="Service Requesting"
+								/>
+
+								<Input
+									type="text"
+									value={reference}
+									onChange={(e) => {
+										// setSubject(e.target.value);
+										setReference(e.target.value);
+									}}
+									color={"brand.200"}
+									borderRadius={"full"}
+									borderColor="brand.200"
+									borderWidth={"2px"}
+									id="reference"
+									placeholder="How did you find us"
+								/>
+							</Flex>
+							<Textarea
+								type="text"
+								value={message}
+								onChange={(e) => {
+									setMessage(e.target.value);
+								}}
+								color={"brand.200"}
+								borderRadius={"xl"}
+								borderColor="brand.200"
+								borderWidth={"2px"}
+								id="message"
+								placeholder="message"
+								size="sm"
+							/>
+
+							<ButtonGroup>
+								<Button
+									type="submit"
+									rounded="full"
+									px="6"
+									bgColor="brand.200"
+									_hover={{ bg: "brand.100" }}
+									color="white"
+									variant="solid"
+									fontFamily={"heading"}
+									fontSize={"x-small"}
+								>
+									GET IN TOUCH
+								</Button>
+							</ButtonGroup>
+						</Flex>
 					</form>
-					<div className="text-left pl-3">
-						{showSuccessMessage && (
-							<Alert status="success">
-								Thankyou! Your Message has been delivered.{" "}
-							</Alert>
-						)}
-						{showFailureMessage && (
-							<Alert status="error">
-								Oops! Something went wrong, please try again.{" "}
-							</Alert>
-						)}
-					</div>
 				</Flex>
 			</Flex>
 		</div>
