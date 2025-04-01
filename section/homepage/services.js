@@ -7,7 +7,7 @@ import TextBox from "../../components/textBox";
 // data
 const servicesItems = [
   {
-    title: "SAFETY STAFFING",
+    title: "PROFESSIONAL SERVICES",
     des: "We alleviate your staffing burdens by providing trained professionals to help meet your on-site safety requirements. From small projects to large ones, we match you with certified, experienced, and trusted safety professionals that come with a wide range of work experience. They understand the complexities of serious hazards within construction and manufacturing environments to make your project a success. By allowing TXO to handle the hiring of safety profesionals, you insure that all on-site safety requirements are met on day one.",
     src: "/safety-staffing.png",
   },
