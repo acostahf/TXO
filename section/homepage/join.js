@@ -119,7 +119,7 @@ const Join = () => {
                         <Flex
                             maxW="sm"
                             zIndex="2"
-                            justifyContent="center"
+                            justifyContent="start"
                             flexDirection="column"
                         >
                             <Heading className="element" as="h1" size="lg">
