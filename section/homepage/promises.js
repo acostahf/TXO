@@ -16,7 +16,7 @@ const cardItems = [
         img: "/bolt.svg",
         title: "Fast and Easy",
         description:
-            "Who said safety couldn”t be fast and easy? We are mindful of deadlines and expectations so you can rest assured we can get a safety solutions for your job site faster and better than the rest.",
+            "Who said safety couldn”t be fast and easy? We are mindful of deadlines and expectations so you can rest assured we can get a safety solution for your job site faster and better than the rest.",
     },
     {
         img: "/money.svg",
