@@ -10,7 +10,7 @@ const cardItems = [
     img: "/key.svg",
     title: "Turnkey Solutions",
     description:
-      "Looking for a specific set of talent for your safety needs? At TXO, we love to come up with fresh solutions that spark innovation and lead to better business results. We provide the safety that checks off all the boxes because we are your one stop shop for all that is safety! ",
+      "At TXO, we love to come up with fresh solutions that spark innovation and lead to better business results. By allowing TXO to audit and develop your safety program, we ensure that on-site safety requirements are met on day one.",
   },
   {
     img: "/bolt.svg",
